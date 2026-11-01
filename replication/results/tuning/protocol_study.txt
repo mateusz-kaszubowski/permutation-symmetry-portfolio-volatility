@@ -1,0 +1,14 @@
+# Best validation QLIKE (at the epoch shown) and QLIKE at epochs 5, 10, 20 and 29 (epochs counted from 0) on the tuning fold (training to 2016, validation 2017-2018, h = 5), mean of seeds 0 and 1,
+# for four training settings: learning rate and decay of the weight average (ema) or weight decay (wd). D is the setting used.
+DeepSets       A lr1e-3 ema.995   best 0.3723 @ep  4 | ep5 0.3732 ep10 0.3761 ep20 0.3822 ep29 0.3863
+DeepSets       B lr3e-4 ema.995   best 0.3723 @ep  3 | ep5 0.3730 ep10 0.3777 ep20 0.3754 ep29 0.3761
+DeepSets       C lr3e-4 wd1e-2    best 0.3723 @ep  3 | ep5 0.3729 ep10 0.3777 ep20 0.3753 ep29 0.3761
+DeepSets       D lr1e-4 ema.99    best 0.3694 @ep  6 | ep5 0.3697 ep10 0.3737 ep20 0.3754 ep29 0.3765
+MLP            A lr1e-3 ema.995   best 0.3692 @ep  3 | ep5 0.3714 ep10 0.3802 ep20 0.3867 ep29 0.3888
+MLP            B lr3e-4 ema.995   best 0.3662 @ep  4 | ep5 0.3673 ep10 0.3754 ep20 0.3826 ep29 0.3863
+MLP            C lr3e-4 wd1e-2    best 0.3662 @ep  4 | ep5 0.3672 ep10 0.3754 ep20 0.3825 ep29 0.3863
+MLP            D lr1e-4 ema.99    best 0.3642 @ep  5 | ep5 0.3642 ep10 0.3699 ep20 0.3734 ep29 0.3750
+SetTransformer A lr1e-3 ema.995   best 0.3721 @ep  4 | ep5 0.3746 ep10 0.3786 ep20 0.3848 ep29 0.3936
+SetTransformer B lr3e-4 ema.995   best 0.3747 @ep  3 | ep5 0.3782 ep10 0.3829 ep20 0.3873 ep29 0.3907
+SetTransformer C lr3e-4 wd1e-2    best 0.3747 @ep  3 | ep5 0.3782 ep10 0.3829 ep20 0.3873 ep29 0.3908
+SetTransformer D lr1e-4 ema.99    best 0.3729 @ep  2 | ep5 0.3784 ep10 0.3849 ep20 0.3824 ep29 0.3851

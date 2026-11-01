@@ -1,0 +1,238 @@
+"""Training loop (QLIKE loss on randomly sampled portfolios) and batched prediction for fixed portfolios."""
+import copy
+import time
+from dataclasses import asdict, dataclass, replace
+
+import numpy as np
+import torch
+
+from .dataset import SEQ_MARGIN, PortfolioPool
+from .config import SMOKE
+from .models import MODELS, SEQ_MODELS, SLOT_MODELS
+
+
+@dataclass
+class TrainCfg:
+    lr: float = 1e-4
+    weight_decay: float = 1e-4
+    batch: int = 256
+    steps_per_epoch: int = 125
+    max_epochs: int = 60
+    patience: int = 10
+    n_min: int = 2
+    n_max: int = 20
+    alphas: tuple = (0.3, 1.0, 3.0)
+    grad_clip: float = 1.0
+    val_batches: int = 38  # 38 * 256 ~ 9.7k fixed validation portfolios-days
+    gru_len: int = 22
+    ema_decay: float = 0.99  # exponential moving average of weights, used for validation and prediction
+    min_epochs: int = 0  # robustness protocol: never stop before this many epochs
+    top_k_avg: int = 1  # robustness protocol: average the EMA weights of the k best validation epochs
+    raw_inputs: bool = False  # experiment A1: no engineered portfolio-level summaries
+    portfolio_pool: int = 0  # experiment A2: train (and validate) on a fixed pool of this many portfolios; 0 = fresh draws
+    pool_seed: int = 4242  # the same pool for every model and seed
+    pool_shuffle: bool = False  # experiment B1: list the pool's assets in a fresh random order in every draw
+    refit: bool = False  # K2: after early stopping, retrain from scratch on train+validation
+    refit_min_epochs: int = 5  # K2: the refit runs for max(best epoch, this) epochs
+
+
+def qlike(s, y):
+    """Patton (2011) QLIKE with forecast exp(s) of the variance proxy y; minimum 0 at exp(s) = y."""
+    y = y.clamp_min(1e-12)
+    return y * torch.exp(-s) + s - torch.log(y) - 1.0
+
+
+def build_model(name, hp=None):
+    return MODELS[name](**(hp or {}))
+
+
+def fixed_batches(panel, t_range, n_batches, cfg, seed, pool=None):
+    gen = torch.Generator(device=panel.device).manual_seed(seed)
+    out = []
+    for k in range(n_batches):
+        if pool is not None:
+            N = pool.sizes[k % len(pool.sizes)]
+            out.append((N, pool.sample(cfg.batch, N, t_range, gen, panel.device)))
+            continue
+        N = cfg.n_min + k % (cfg.n_max - cfg.n_min + 1)
+        alpha = cfg.alphas[k % len(cfg.alphas)]
+        out.append((N, panel.sample(cfg.batch, N, t_range, gen, alpha=alpha)))
+    return out
+
+
+@torch.no_grad()
+def evaluate_batches(model, panel, batches, h, gru_len, raw=False):
+    model.eval()
+    tot, n = 0.0, 0
+    for _, (t, S, w) in batches:
+        inp, y = panel.batch(t, S, w, h=h, gru_len=gru_len, raw=raw)
+        loss = qlike(model(inp), y)
+        tot += loss.sum().item()
+        n += loss.numel()
+    return tot / n
+
+
+def train_model(name, panel, split, h, seed, cfg=None, hp=None, verbose=False):
+    cfg = cfg or TrainCfg()
+    if SMOKE:  # smoke run: two short epochs
+        cfg = replace(cfg, steps_per_epoch=2, max_epochs=2, patience=1, min_epochs=0, val_batches=2, refit_min_epochs=1)
+    if cfg.refit and cfg.portfolio_pool:
+        raise ValueError("the refit protocol samples fresh portfolios; it is not implemented for a fixed pool")
+    if cfg.gru_len != SEQ_MARGIN:
+        raise ValueError("gru_len must equal dataset.SEQ_MARGIN (prediction and the sample start assume 22 days)")
+    torch.manual_seed(seed)
+    np.random.seed(seed)
+    model = build_model(name, hp).to(panel.device)
+    ema = copy.deepcopy(model)
+    for q in ema.parameters():
+        q.requires_grad_(False)
+    gru_len = cfg.gru_len if name in SEQ_MODELS else 0
+    gen = torch.Generator(device=panel.device).manual_seed(seed)
+    panel.fit_scalers(split.train, torch.Generator(device=panel.device).manual_seed(0))
+    pool = (PortfolioPool(panel, cfg.portfolio_pool, cfg.n_min, cfg.n_max, cfg.alphas, cfg.pool_seed,
+                          shuffle=cfg.pool_shuffle)
+            if cfg.portfolio_pool else None)
+    val = fixed_batches(panel, split.val, cfg.val_batches, cfg, seed=987 + h, pool=pool)
+    opt = torch.optim.AdamW(model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=cfg.max_epochs)
+    best, best_state, wait, hist, top = np.inf, None, 0, [], []
+    t0 = time.time()
+    rng = np.random.default_rng(seed)
+    for epoch in range(cfg.max_epochs):
+        model.train()
+        tr = 0.0
+        for _ in range(cfg.steps_per_epoch):
+            if pool is not None:
+                N = int(rng.choice(pool.sizes))
+                t, S, w = pool.sample(cfg.batch, N, split.train, gen, panel.device)
+            else:
+                N = int(rng.integers(cfg.n_min, cfg.n_max + 1))
+                alpha = float(rng.choice(cfg.alphas))
+                t, S, w = panel.sample(cfg.batch, N, split.train, gen, alpha=alpha)
+            inp, y = panel.batch(t, S, w, h=h, gru_len=gru_len, raw=cfg.raw_inputs)
+            loss = qlike(model(inp), y).mean()
+            opt.zero_grad(set_to_none=True)
+            loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip)
+            opt.step()
+            with torch.no_grad():
+                for e, q in zip(ema.parameters(), model.parameters()):
+                    e.lerp_(q, 1 - cfg.ema_decay)
+            tr += loss.item()
+        sched.step()
+        v = evaluate_batches(ema, panel, val, h, gru_len, raw=cfg.raw_inputs)
+        hist.append((epoch, tr / cfg.steps_per_epoch, v))
+        if verbose:
+            print(f"  ep {epoch:3d} train {tr / cfg.steps_per_epoch:.4f} val {v:.4f}  ({time.time() - t0:.0f}s)")
+        if cfg.top_k_avg > 1 and np.isfinite(v):
+            top.append((v, copy.deepcopy(ema.state_dict())))
+            top = sorted(top, key=lambda z: z[0])[: cfg.top_k_avg]
+        if v < best - 1e-5:
+            best, best_state, wait = v, copy.deepcopy(ema.state_dict()), 0
+        else:
+            wait += 1
+            if wait >= cfg.patience and epoch + 1 >= cfg.min_epochs:
+                break
+    if best_state is None:
+        raise RuntimeError(f"{name}: no finite validation loss in {len(hist)} epochs (diverged)")
+    if cfg.top_k_avg > 1:
+        best_state = {k: sum(st[k] for _, st in top) / len(top) for k in best_state}
+    model.load_state_dict(best_state)
+    refit_epochs = 0
+    if cfg.refit:  # K2: the validation year only chooses the number of epochs; retrain on train + validation
+        best_epoch = 1 + int(np.argmin([r[2] for r in hist]))
+        refit_epochs = max(best_epoch, cfg.refit_min_epochs)
+        model = _refit(name, panel, split, h, seed, cfg, hp, gru_len, refit_epochs)
+    model.raw_inputs = cfg.raw_inputs  # prediction must use the same input mode
+    info = dict(model=name, h=h, seed=seed, best_val=best, epochs=len(hist), seconds=time.time() - t0,
+                n_params=sum(p.numel() for p in model.parameters()), history=hist, cfg=asdict(cfg), hp=hp or {},
+                refit_epochs=refit_epochs)
+    return model, info
+
+
+def _refit(name, panel, split, h, seed, cfg, hp, gru_len, n_epochs):
+    """Train a fresh model on all origins up to the end of the validation year (targets kept inside) for a fixed number
+    of epochs, with the learning-rate schedule of the selection run; returns the EMA weights after the last epoch."""
+    full = (split.train[0], split.val[1])
+    torch.manual_seed(seed + 10_000)
+    model = build_model(name, hp).to(panel.device)
+    ema = copy.deepcopy(model)
+    for q in ema.parameters():
+        q.requires_grad_(False)
+    panel.fit_scalers(full, torch.Generator(device=panel.device).manual_seed(0))
+    gen = torch.Generator(device=panel.device).manual_seed(seed + 10_000)
+    rng = np.random.default_rng(seed + 10_000)
+    opt = torch.optim.AdamW(model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay)
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=cfg.max_epochs)
+    for _ in range(n_epochs):
+        model.train()
+        for _ in range(cfg.steps_per_epoch):
+            N = int(rng.integers(cfg.n_min, cfg.n_max + 1))
+            alpha = float(rng.choice(cfg.alphas))
+            t, S, w = panel.sample(cfg.batch, N, full, gen, alpha=alpha)
+            inp, y = panel.batch(t, S, w, h=h, gru_len=gru_len, raw=cfg.raw_inputs)
+            loss = qlike(model(inp), y).mean()
+            opt.zero_grad(set_to_none=True)
+            loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip)
+            opt.step()
+            with torch.no_grad():
+                for e, q in zip(ema.parameters(), model.parameters()):
+                    e.lerp_(q, 1 - cfg.ema_decay)
+        sched.step()
+    model.load_state_dict(ema.state_dict())
+    return model
+
+
+@torch.no_grad()
+def predict_portfolios(model, name, panel, portfolios, t_idx, gru_len=22, chunk=8192, tta_k=0):
+    """Forecasts s = log variance for every (origin, portfolio): array (len(t_idx), len(portfolios)); NaN if unsupported.
+
+    tta_k > 0 (experiment B3): average of the log-variance forecasts over tta_k random orderings of the constituents.
+    The inputs are standardised with the scalers currently stored on `panel`, i.e. those of the last train_model call:
+    predict with a model before training the next one (as run_nn does)."""
+    model.eval()
+    dev = panel.device
+    out = np.full((len(t_idx), len(portfolios)), np.nan, dtype=np.float32)
+    n_slots = getattr(model, "n_slots", None)
+    raw = getattr(model, "raw_inputs", False)
+    by_n = {}
+    for j, p in enumerate(portfolios):
+        by_n.setdefault(len(p["ids"]), []).append(j)
+    t_all = torch.as_tensor(np.asarray(t_idx), device=dev)
+    for N, cols in by_n.items():
+        if name in SLOT_MODELS and N > n_slots:
+            continue
+        S = torch.as_tensor([portfolios[j]["ids"] for j in cols], device=dev)
+        W = torch.as_tensor([portfolios[j]["weights"] for j in cols], device=dev, dtype=torch.float32)
+        P = len(cols)
+        tt = t_all.repeat_interleave(P)
+        SS, WW = S.repeat(len(t_idx), 1), W.repeat(len(t_idx), 1)
+        step = max(1, chunk * 100 // (N * N)) if N > 10 else chunk  # pairwise tensors grow with N^2
+        preds = []
+        gen = torch.Generator(device=dev).manual_seed(12345)
+        for a in range(0, len(tt), step):
+            s_, w_ = SS[a : a + step], WW[a : a + step]
+            orders = [None] if not tta_k else [torch.rand(s_.shape, device=dev, generator=gen).argsort(1)
+                                                for _ in range(tta_k)]
+            acc = 0.0
+            for o in orders:
+                s_o, w_o = (s_, w_) if o is None else (s_.gather(1, o), w_.gather(1, o))
+                inp, _ = panel.batch(tt[a : a + step], s_o, w_o, gru_len=gru_len if name in SEQ_MODELS else 0, raw=raw)
+                acc = acc + model(inp).float()
+            preds.append(acc / len(orders))
+        out[:, cols] = torch.cat(preds).view(len(t_idx), P).cpu().numpy()
+    return out
+
+
+@torch.no_grad()
+def realized_targets(panel, portfolios, t_idx, h):
+    """Average daily realised variance over t+1..t+h for each origin/portfolio: (len(t_idx), len(portfolios))."""
+    R = panel.R.cpu().numpy().astype(np.float64)
+    t_idx = np.asarray(t_idx)
+    out = np.empty((len(t_idx), len(portfolios)))
+    for j, p in enumerate(portfolios):
+        rp = R[:, p["ids"]] @ np.asarray(p["weights"])
+        c = np.concatenate([[0.0], np.cumsum(rp**2)])
+        out[:, j] = (c[t_idx + h + 1] - c[t_idx + 1]) / h
+    return out

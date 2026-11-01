@@ -1,0 +1,736 @@
+part,family,universe,model,benchmark,mean_diff,p,p_holm,verdict,p_global_holm,p_global_bh
+main,A1: raw inputs,ETF,DeepSets-RAW,MLP-RAW,-0.0177074577195572,0.0050926743772613,0.0050926743772613,more accurate,1.0,0.030431834693390693
+main,A1: raw inputs,ETF,PENet-RAW,MLP-RAW,-0.026417321214441,1.1649540775350798e-24,4.65981631014032e-24,more accurate,8.550762929107486e-22,4.281206234941419e-22
+main,A1: raw inputs,ETF,SetTransformer-RAW,MLP-RAW,-0.0178609832322692,3.16688828548482e-07,6.33377657096964e-07,more accurate,0.00022801595655490704,1.4547893061445892e-05
+main,A1: raw inputs,ETF,SetGRU-RAW,GRU-RAW,-0.1060272209502078,3.103364339450758e-11,9.310093018352274e-11,more accurate,2.25304251044125e-08,2.280972789496307e-09
+main,A1: raw inputs,Stocks,DeepSets-RAW,MLP-RAW,-0.0025468606811991,0.5983458146963807,0.5983458146963807,indistinguishable,1.0,0.6925273358387853
+main,A1: raw inputs,Stocks,PENet-RAW,MLP-RAW,-0.0332502355262588,5.100783236607031e-12,1.5302349709821094e-11,more accurate,3.7082694130133116e-09,4.165639643229075e-10
+main,A1: raw inputs,Stocks,SetTransformer-RAW,MLP-RAW,-0.0253264540183357,9.117180171775874e-26,3.646872068710349e-25,more accurate,6.701127426255267e-23,6.701127426255267e-23
+main,A1: raw inputs,Stocks,SetGRU-RAW,GRU-RAW,-0.0329280307240369,0.0010087276047668,0.0020174552095337,more accurate,0.6526467602841196,0.008316068860669266
+main,A2: pool of 50 portfolios,ETF,DeepSets-P50,MLP-P50,-0.0085715120252404,0.3768365040082015,0.7536730080164031,indistinguishable,1.0,0.5045838371850127
+main,A2: pool of 50 portfolios,ETF,PENet-P50,MLP-P50,-0.0207701568632964,4.194783324416743e-05,0.0001677913329766,more accurate,0.029321535437673032,0.0008332880387692718
+main,A2: pool of 50 portfolios,ETF,SetTransformer-P50,MLP-P50,-0.0037874660469027,0.7446029413823483,0.7536730080164031,indistinguishable,1.0,0.8072023037109527
+main,A2: pool of 50 portfolios,ETF,SetGRU-P50,GRU-P50,-0.0120402273356671,0.0369768700857999,0.1109306102573997,indistinguishable,1.0,0.1306634591974179
+main,A2: pool of 50 portfolios,ETF,EQCov-P50,MLP-P50,-0.0222590159194483,3.0957229209877396e-09,1.5478614604938697e-08,more accurate,2.238207671874136e-06,1.7502741130199915e-07
+main,A2: pool of 50 portfolios,Stocks,DeepSets-P50,MLP-P50,-0.0219623866625327,0.0001605483141926,0.0006421932567704,more accurate,0.10917285365096799,0.002107196623777875
+main,A2: pool of 50 portfolios,Stocks,PENet-P50,MLP-P50,-0.0240876932587506,8.414677402526825e-05,0.0004207338701263,more accurate,0.058061274077435096,0.0013244539155645044
+main,A2: pool of 50 portfolios,Stocks,SetTransformer-P50,MLP-P50,-0.0232476938109397,0.0003809056757186,0.001142717027156,more accurate,0.25482589705574343,0.004178592114226433
+main,A2: pool of 50 portfolios,Stocks,SetGRU-P50,GRU-P50,-0.0099432869354961,0.0012435450182231,0.0024870900364463,more accurate,0.7995994467174533,0.009828017079505147
+main,A2: pool of 50 portfolios,Stocks,EQCov-P50,MLP-P50,-0.0184654842389256,0.0037011969630833,0.0037011969630833,more accurate,1.0,0.024074157237754207
+main,A2: pool of 500 portfolios,ETF,DeepSets-P500,MLP-P500,0.0074223922944331,0.2214326627308003,0.4428653254616007,indistinguishable,1.0,0.38709570787242265
+main,A2: pool of 500 portfolios,ETF,PENet-P500,MLP-P500,-0.0019856445550877,0.4174663715590142,0.4428653254616007,indistinguishable,1.0,0.5383119001682025
+main,A2: pool of 500 portfolios,ETF,SetTransformer-P500,MLP-P500,0.0142358085465739,0.1431777882008434,0.4295333646025303,indistinguishable,1.0,0.30359295197637975
+main,A2: pool of 500 portfolios,ETF,SetGRU-P500,GRU-P500,-0.0110124677186119,0.0009593165062608,0.0047965825313042,more accurate,0.6216370960569984,0.008012473092064636
+main,A2: pool of 500 portfolios,ETF,EQCov-P500,MLP-P500,-0.0062221340193531,0.0300303553807128,0.1201214215228515,indistinguishable,1.0,0.11350554616143584
+main,A2: pool of 500 portfolios,Stocks,DeepSets-P500,MLP-P500,-0.0070380209728458,0.0262610050178352,0.0787830150535058,indistinguishable,1.0,0.10547452835032171
+main,A2: pool of 500 portfolios,Stocks,PENet-P500,MLP-P500,-0.0086499441271587,0.0065344944196527,0.0261379776786108,more accurate,1.0,0.03781774329484043
+main,A2: pool of 500 portfolios,Stocks,SetTransformer-P500,MLP-P500,-0.0103368103063102,0.0034786437497579,0.0173932187487896,more accurate,1.0,0.023034262667315824
+main,A2: pool of 500 portfolios,Stocks,SetGRU-P500,GRU-P500,-0.0056881889001202,0.0426219358397168,0.0852438716794336,indistinguishable,1.0,0.14707569409479743
+main,A2: pool of 500 portfolios,Stocks,EQCov-P500,MLP-P500,-0.0054867464653499,0.0436488389513504,0.0852438716794336,indistinguishable,1.0,0.14884849867526992
+main,B1: pool of 50 vs shuffled counterpart,ETF,DeepSets-P50,MLP-P50s,0.0143402226580581,0.0946275991200092,0.3785103964800368,indistinguishable,1.0,0.23659603181095723
+main,B1: pool of 50 vs shuffled counterpart,ETF,PENet-P50,MLP-P50s,0.0021415778200021,0.4885822267633893,1.0,indistinguishable,1.0,0.5992463447876142
+main,B1: pool of 50 vs shuffled counterpart,ETF,SetTransformer-P50,MLP-P50s,0.0191242686363958,0.0709602816736694,0.3548014083683473,indistinguishable,1.0,0.20373362121151176
+main,B1: pool of 50 vs shuffled counterpart,ETF,SetGRU-P50,GRU-P50s,-0.0052206269903165,0.4393379661437905,1.0,indistinguishable,1.0,0.5583139655755691
+main,B1: pool of 50 vs shuffled counterpart,ETF,EQCov-P50,MLP-P50s,0.0006527187638501,0.8580563440055022,1.0,indistinguishable,1.0,0.89456937992063
+main,B1: pool of 50 vs shuffled counterpart,Stocks,DeepSets-P50,MLP-P50s,-0.0064842792384271,0.0580771503611778,0.1631823321162894,indistinguishable,1.0,0.18149196526743153
+main,B1: pool of 50 vs shuffled counterpart,Stocks,PENet-P50,MLP-P50s,-0.008609585834645,0.0200324561073832,0.1001622805369164,indistinguishable,1.0,0.08604412325528928
+main,B1: pool of 50 vs shuffled counterpart,Stocks,SetTransformer-P50,MLP-P50s,-0.007769586386834,0.0543941107054298,0.1631823321162894,indistinguishable,1.0,0.176134584455523
+main,B1: pool of 50 vs shuffled counterpart,Stocks,SetGRU-P50,GRU-P50s,-0.0067639760850122,0.027957655245863,0.111830620983452,indistinguishable,1.0,0.10815198213531214
+main,B1: pool of 50 vs shuffled counterpart,Stocks,EQCov-P50,MLP-P50s,-0.00298737681482,0.3659191243401192,0.3659191243401192,indistinguishable,1.0,0.4980571387589884
+main,B1: pool of 500 vs shuffled counterpart,ETF,DeepSets-P500,MLP-P500s,0.0057148798111266,0.1912283079890626,0.3485261095977529,indistinguishable,1.0,0.36131826830838304
+main,B1: pool of 500 vs shuffled counterpart,ETF,PENet-P500,MLP-P500s,-0.0036931570383941,0.1395104696983808,0.3485261095977529,indistinguishable,1.0,0.29920059693181156
+main,B1: pool of 500 vs shuffled counterpart,ETF,SetTransformer-P500,MLP-P500s,0.0125282960632674,0.1161753698659176,0.3485261095977529,indistinguishable,1.0,0.26820096191074505
+main,B1: pool of 500 vs shuffled counterpart,ETF,SetGRU-P500,GRU-P500s,-0.0072772329164275,0.0625496982376909,0.2554929864128457,indistinguishable,1.0,0.1868862935150521
+main,B1: pool of 500 vs shuffled counterpart,ETF,EQCov-P500,MLP-P500s,-0.0079296465026596,0.0510985972825691,0.2554929864128457,indistinguishable,1.0,0.16841914350981296
+main,B1: pool of 500 vs shuffled counterpart,Stocks,DeepSets-P500,MLP-P500s,-0.0042957816272641,0.150784966203466,0.3015699324069321,indistinguishable,1.0,0.31218859199872534
+main,B1: pool of 500 vs shuffled counterpart,Stocks,PENet-P500,MLP-P500s,-0.0059077047815769,0.0562087647314623,0.1686262941943871,indistinguishable,1.0,0.18040804400709518
+main,B1: pool of 500 vs shuffled counterpart,Stocks,SetTransformer-P500,MLP-P500s,-0.0075945709607285,0.0195573598755953,0.0977867993779768,indistinguishable,1.0,0.08505715685539968
+main,B1: pool of 500 vs shuffled counterpart,Stocks,SetGRU-P500,GRU-P500s,-0.0075723931545922,0.0304586294409701,0.1218345177638805,indistinguishable,1.0,0.11421986040363788
+main,B1: pool of 500 vs shuffled counterpart,Stocks,EQCov-P500,MLP-P500s,-0.0027445071197682,0.3045537154064817,0.3045537154064817,indistinguishable,1.0,0.44064366303890556
+main,B1: shuffling improves the counterpart$^{a}$,ETF,MLP-P50s,MLP-P50,-0.0229117346832985,4.101273722043199e-07,1.6405094888172791e-06,more accurate,0.000294881580614906,1.7731977562951476e-05
+main,B1: shuffling improves the counterpart$^{a}$,ETF,GRU-P50s,GRU-P50,-0.0068196003453505,0.0270397287659052,0.0655311970344317,indistinguishable,1.0,0.10627914782321028
+main,B1: shuffling improves the counterpart$^{a}$,ETF,MLP-P500s,MLP-P500,0.0017075124833064,0.4137419215775466,0.4137419215775466,indistinguishable,1.0,0.5373773201516572
+main,B1: shuffling improves the counterpart$^{a}$,ETF,GRU-P500s,GRU-P500,-0.0037352348021844,0.0218437323448105,0.0655311970344317,indistinguishable,1.0,0.09227093835307884
+main,B1: shuffling improves the counterpart$^{a}$,Stocks,MLP-P50s,MLP-P50,-0.0154781074241056,0.0005626737158024,0.0022506948632098,more accurate,0.371364652429584,0.005441647119931105
+main,B1: shuffling improves the counterpart$^{a}$,Stocks,GRU-P50s,GRU-P50,-0.0031793108504839,0.1020317886923286,0.2040635773846572,indistinguishable,1.0,0.2516555862042333
+main,B1: shuffling improves the counterpart$^{a}$,Stocks,MLP-P500s,MLP-P500,-0.0027422393455817,0.036188192524216,0.108564577572648,indistinguishable,1.0,0.12979961009001034
+main,B1: shuffling improves the counterpart$^{a}$,Stocks,GRU-P500s,GRU-P500,0.0018842042544719,0.4306554935988331,0.4306554935988331,indistinguishable,1.0,0.5512923198194178
+main,"B2: vs MLP-sorted, raw inputs",ETF,DeepSets-RAW,MLP-sorted-RAW,0.0032536654830516,0.556792965231279,0.8796293498455907,indistinguishable,1.0,0.6558378677003045
+main,"B2: vs MLP-sorted, raw inputs",ETF,PENet-RAW,MLP-sorted-RAW,-0.005456198011832,0.0938071456666715,0.2814214370000146,indistinguishable,1.0,0.23659603181095723
+main,"B2: vs MLP-sorted, raw inputs",ETF,SetTransformer-RAW,MLP-sorted-RAW,0.0031001399703397,0.4398146749227953,0.8796293498455907,indistinguishable,1.0,0.5583139655755691
+main,"B2: vs MLP-sorted, raw inputs",Stocks,DeepSets-RAW,MLP-sorted-RAW,0.03018347663015,0.0001500471862258,0.0004501415586774,less accurate,0.1023321810059956,0.0020423089236289442
+main,"B2: vs MLP-sorted, raw inputs",Stocks,PENet-RAW,MLP-sorted-RAW,-0.0005198982149096,0.9084928313321812,0.9084928313321812,indistinguishable,1.0,0.9274197653182682
+main,"B2: vs MLP-sorted, raw inputs",Stocks,SetTransformer-RAW,MLP-sorted-RAW,0.0074038832930134,0.1138367278155162,0.2276734556310324,indistinguishable,1.0,0.2673162777776499
+main,"B2: vs MLP-sorted, pool of 50",ETF,DeepSets-P50,MLP-sorted-P50,0.0010002967545986,0.9212337034860067,1.0,indistinguishable,1.0,0.9367576301216324
+main,"B2: vs MLP-sorted, pool of 50",ETF,PENet-P50,MLP-sorted-P50,-0.0111983480834573,0.0232186393622267,0.0696559180866802,indistinguishable,1.0,0.09696420415475354
+main,"B2: vs MLP-sorted, pool of 50",ETF,SetTransformer-P50,MLP-sorted-P50,0.0057843427329363,0.6310626647426258,1.0,indistinguishable,1.0,0.7202345630214751
+main,"B2: vs MLP-sorted, pool of 50",ETF,EQCov-P50,MLP-sorted-P50,-0.0126872071396093,0.0002910233177409,0.0011640932709639,more accurate,0.1958586928396257,0.003387133801182469
+main,"B2: vs MLP-sorted, pool of 50",Stocks,DeepSets-P50,MLP-sorted-P50,-0.0118677335601076,0.007111710606466,0.021335131819398,more accurate,1.0,0.0405202115949807
+main,"B2: vs MLP-sorted, pool of 50",Stocks,PENet-P50,MLP-sorted-P50,-0.0139930401563255,0.002659549024988,0.0106381960999523,more accurate,1.0,0.019164397385942944
+main,"B2: vs MLP-sorted, pool of 50",Stocks,SetTransformer-P50,MLP-sorted-P50,-0.0131530407085145,0.0091863406582615,0.021335131819398,more accurate,1.0,0.04928438236366572
+main,"B2: vs MLP-sorted, pool of 50",Stocks,EQCov-P50,MLP-sorted-P50,-0.0083708311365005,0.1180457305391305,0.1180457305391305,indistinguishable,1.0,0.2699761756969333
+main,"B2: vs MLP-sorted, pool of 500",ETF,DeepSets-P500,MLP-sorted-P500,0.0081749544586216,0.2057895433877985,0.4188808357045364,indistinguishable,1.0,0.37813828597507976
+main,"B2: vs MLP-sorted, pool of 500",ETF,PENet-P500,MLP-sorted-P500,-0.0012330823908991,0.6474465714233724,0.6474465714233724,indistinguishable,1.0,0.7343722685126214
+main,"B2: vs MLP-sorted, pool of 500",ETF,SetTransformer-P500,MLP-sorted-P500,0.0149883707107624,0.1396269452348454,0.4188808357045364,indistinguishable,1.0,0.29920059693181156
+main,"B2: vs MLP-sorted, pool of 500",ETF,EQCov-P500,MLP-sorted-P500,-0.0054695718551646,0.0543980281243588,0.2175921124974353,indistinguishable,1.0,0.176134584455523
+main,"B2: vs MLP-sorted, pool of 500",Stocks,DeepSets-P500,MLP-sorted-P500,-0.0052071008680636,0.093247589340171,0.1864951786803421,indistinguishable,1.0,0.23659603181095723
+main,"B2: vs MLP-sorted, pool of 500",Stocks,PENet-P500,MLP-sorted-P500,-0.0068190240223765,0.0226243916275705,0.0678731748827117,indistinguishable,1.0,0.09502244483579611
+main,"B2: vs MLP-sorted, pool of 500",Stocks,SetTransformer-P500,MLP-sorted-P500,-0.0085058902015281,0.0108350221475494,0.0433400885901979,more accurate,1.0,0.054546173140060335
+main,"B2: vs MLP-sorted, pool of 500",Stocks,EQCov-P500,MLP-sorted-P500,-0.0036558263605677,0.1747046614799836,0.1864951786803421,indistinguishable,1.0,0.3433367010368662
+main,"B3: vs counterpart averaged over orderings, $h=1$",ETF,DeepSets,MLP-TTA,-0.0016112499913517,0.5260189671016517,0.9895332293691028,indistinguishable,1.0,0.6317384653916897
+main,"B3: vs counterpart averaged over orderings, $h=1$",ETF,PENet,MLP-TTA,-0.0020667223516495,0.4947666146845514,0.9895332293691028,indistinguishable,1.0,0.6020752678694459
+main,"B3: vs counterpart averaged over orderings, $h=1$",ETF,SetTransformer,MLP-TTA,-0.0040302213106094,0.1259753871016464,0.5039015484065856,indistinguishable,1.0,0.2801788261665738
+main,"B3: vs counterpart averaged over orderings, $h=1$",ETF,SetGRU,GRU-TTA,-0.0111864099965969,0.0054575793674534,0.027287896837267,more accurate,1.0,0.03209056668062599
+main,"B3: vs counterpart averaged over orderings, $h=1$",ETF,EQCov,MLP-TTA,-0.0050171221974864,0.1289573586289388,0.5039015484065856,indistinguishable,1.0,0.2816261894445755
+main,"B3: vs counterpart averaged over orderings, $h=1$",Stocks,DeepSets,MLP-TTA,-0.006584423884942,0.0301137163285442,0.056820431776811,indistinguishable,1.0,0.11350554616143584
+main,"B3: vs counterpart averaged over orderings, $h=1$",Stocks,PENet,MLP-TTA,-0.0094315440298425,0.0045628721061792,0.0136886163185376,more accurate,1.0,0.028421279644421288
+main,"B3: vs counterpart averaged over orderings, $h=1$",Stocks,SetTransformer,MLP-TTA,-0.011163938659832,5.216331319254207e-05,0.0002608165659627,more accurate,0.03630566598200928,0.0009585008799129606
+main,"B3: vs counterpart averaged over orderings, $h=1$",Stocks,SetGRU,GRU-TTA,-0.0110470632028088,0.0002466262576955,0.0009865050307821,more accurate,0.1664727239444625,0.0029716442525605327
+main,"B3: vs counterpart averaged over orderings, $h=1$",Stocks,EQCov,MLP-TTA,-0.006865362284158,0.0284102158884055,0.056820431776811,indistinguishable,1.0,0.10932727056533006
+main,"B3: vs counterpart averaged over orderings, $h=5$",ETF,DeepSets,MLP-TTA,0.0022846381599158,0.3575822135225333,1.0,indistinguishable,1.0,0.48942816934648414
+main,"B3: vs counterpart averaged over orderings, $h=5$",ETF,PENet,MLP-TTA,-0.0015749172598305,0.4885030454268794,1.0,indistinguishable,1.0,0.5992463447876142
+main,"B3: vs counterpart averaged over orderings, $h=5$",ETF,SetTransformer,MLP-TTA,0.0010043055262459,0.7508502635407152,1.0,indistinguishable,1.0,0.8115807995623906
+main,"B3: vs counterpart averaged over orderings, $h=5$",ETF,SetGRU,GRU-TTA,-0.00954936820488,0.0138667769655963,0.0693338848279817,indistinguishable,1.0,0.06661490895237439
+main,"B3: vs counterpart averaged over orderings, $h=5$",ETF,EQCov,MLP-TTA,-0.0102717858551501,0.0870861211287251,0.3483444845149005,indistinguishable,1.0,0.23164926833103297
+main,"B3: vs counterpart averaged over orderings, $h=5$",Stocks,DeepSets,MLP-TTA,-0.0045570689365817,0.093816987236635,0.2785462114418686,indistinguishable,1.0,0.23659603181095723
+main,"B3: vs counterpart averaged over orderings, $h=5$",Stocks,PENet,MLP-TTA,-0.0054572490827631,0.0928487371472895,0.2785462114418686,indistinguishable,1.0,0.23659603181095723
+main,"B3: vs counterpart averaged over orderings, $h=5$",Stocks,SetTransformer,MLP-TTA,-0.0065876061876268,0.0580987932911962,0.2323951731647848,indistinguishable,1.0,0.18149196526743153
+main,"B3: vs counterpart averaged over orderings, $h=5$",Stocks,SetGRU,GRU-TTA,-0.0078321377289942,0.0300847721323223,0.1504238606616115,indistinguishable,1.0,0.11350554616143584
+main,"B3: vs counterpart averaged over orderings, $h=5$",Stocks,EQCov,MLP-TTA,-0.0035424746598549,0.1645260399059333,0.2785462114418686,indistinguishable,1.0,0.3331312378260633
+main,"B4: H1 on 54 stocks, $h=1$",Stocks,DeepSets,MLP,-0.0075951051531731,0.0250317140701258,0.0283730847206266,more accurate,1.0,0.10221283245301369
+main,"B4: H1 on 54 stocks, $h=1$",Stocks,PENet,MLP,-0.0103185307460468,0.0087673002120114,0.0263019006360343,more accurate,1.0,0.04773307893206207
+main,"B4: H1 on 54 stocks, $h=1$",Stocks,SetTransformer,MLP,-0.012740128256429,0.0033967216202203,0.0169836081011016,more accurate,1.0,0.022719401874273588
+main,"B4: H1 on 54 stocks, $h=1$",Stocks,SetGRU,GRU,-0.0137801077070235,0.0038574242483548,0.0169836081011016,more accurate,1.0,0.02465397236991981
+main,"B4: H1 on 54 stocks, $h=1$",Stocks,EQCov,MLP,-0.0079080733620572,0.0141865423603133,0.0283730847206266,more accurate,1.0,0.06684043996686075
+main,"B4: H1 on 54 stocks, $h=5$",Stocks,DeepSets,MLP,-0.0057455603721819,0.0194937716875143,0.058481315062543,indistinguishable,1.0,0.08505715685539968
+main,"B4: H1 on 54 stocks, $h=5$",Stocks,PENet,MLP,-0.0056084904872935,0.0319668780846085,0.0639337561692171,indistinguishable,1.0,0.11689380792132958
+main,"B4: H1 on 54 stocks, $h=5$",Stocks,SetTransformer,MLP,-0.0094142480423118,0.0017078441005999,0.0068313764023998,more accurate,1.0,0.013163356674176297
+main,"B4: H1 on 54 stocks, $h=5$",Stocks,SetGRU,GRU,-0.0147202859023975,0.0004638152162927,0.0023190760814636,more accurate,0.3079733036183528,0.004734780332987979
+main,"B4: H1 on 54 stocks, $h=5$",Stocks,EQCov,MLP,-0.0037185548084134,0.3278806130807939,0.3278806130807939,indistinguishable,1.0,0.4616709781884742
+main,"H1 with ten seeds, $h=1$",Stocks,DeepSets,MLP,-0.0067516414539206,0.0265918344699972,0.0265918344699972,more accurate,1.0,0.10564863965106996
+main,"H1 with ten seeds, $h=1$",Stocks,PENet,MLP,-0.0101938715749524,4.308350852332563e-05,0.0001292505255699,more accurate,0.030072288949281288,0.0008333257569643247
+main,"H1 with ten seeds, $h=1$",Stocks,SetTransformer,MLP,-0.0116411908260922,4.905686913830438e-06,2.4528434569152188e-05,more accurate,0.0034928490826472715,0.00015023666173605713
+main,"H1 with ten seeds, $h=1$",Stocks,SetGRU,GRU,-0.0100921361307104,2.491258234320674e-05,9.965032937282696e-05,more accurate,0.01748863280493113,0.0005385514124193221
+main,"H1 with ten seeds, $h=1$",Stocks,EQCov,MLP,-0.0071344815921511,0.0118888050684287,0.0237776101368575,more accurate,1.0,0.05904237652226415
+main,"B3 with ten seeds, $h=1$",Stocks,DeepSets,MLP-TTA,-0.0061413273123975,0.0431577120301293,0.0431577120301293,more accurate,1.0,0.1482285903838553
+main,"B3 with ten seeds, $h=1$",Stocks,PENet,MLP-TTA,-0.0095835574334293,0.0001174720256149,0.0003524160768447,more accurate,0.0805858095718214,0.00172683877653903
+main,"B3 with ten seeds, $h=1$",Stocks,SetTransformer,MLP-TTA,-0.0110308766845691,1.4141910947176734e-05,7.070955473588367e-05,more accurate,0.009998331039653951,0.0003489525984381613
+main,"B3 with ten seeds, $h=1$",Stocks,SetGRU,GRU-TTA,-0.00939368341345,8.46929714714717e-05,0.0003387718858858,more accurate,0.058353457343844006,0.0013244539155645044
+main,"B3 with ten seeds, $h=1$",Stocks,EQCov,MLP-TTA,-0.006524167450628,0.0213633463562969,0.0427266927125939,more accurate,1.0,0.09076335012646371
+main,"B4 with ten seeds, $h=1$",Stocks,DeepSets,MLP,-0.0087281089986073,0.0084522714777595,0.016904542955519,more accurate,1.0,0.04636133982203904
+main,"B4 with ten seeds, $h=1$",Stocks,PENet,MLP,-0.0108629634084872,0.000373129423221,0.0018656471161054,more accurate,0.24999671355807002,0.004155304940415681
+main,"B4 with ten seeds, $h=1$",Stocks,SetTransformer,MLP,-0.0120872755498437,0.0004771241054444,0.0019084964217776,more accurate,0.3163332819096372,0.004803920787693616
+main,"B4 with ten seeds, $h=1$",Stocks,SetGRU,GRU,-0.0142586175772504,0.0008826352134742,0.0026479056404226,more accurate,0.5728302535447558,0.007456745769006172
+main,"B4 with ten seeds, $h=1$",Stocks,EQCov,MLP,-0.0065766521027493,0.0274405315947775,0.0274405315947775,more accurate,1.0,0.10671317842413472
+main,"C2: vs invariant linear, raw inputs",ETF,DeepSets-RAW,Linear-RAW,-0.0425001382243374,9.096002441783008e-07,3.638400976713203e-06,more accurate,0.000650364174587485,3.183600854624053e-05
+main,"C2: vs invariant linear, raw inputs",ETF,DeepSetsP-RAW,Linear-RAW,-0.0550835903431151,3.283871024201894e-08,1.641935512100947e-07,more accurate,2.3676710084495657e-05,1.6090968018589282e-06
+main,"C2: vs invariant linear, raw inputs",ETF,PENet-RAW,Linear-RAW,-0.0512100017192211,5.7488974220152415e-05,0.0001724669226604,more accurate,0.03989734810878578,0.0010060570488526672
+main,"C2: vs invariant linear, raw inputs",ETF,SetTransformer-RAW,Linear-RAW,-0.0426536637370493,0.0005873419545861,0.0011746839091723,more accurate,0.3870583480722399,0.0056064459301400455
+main,"C2: vs invariant linear, raw inputs",ETF,SetGRU-RAW,Linear-RAW,-0.0465545072809238,0.0050256193371026,0.0050256193371026,more accurate,1.0,0.030431834693390693
+main,"C2: vs invariant linear, raw inputs",Stocks,DeepSets-RAW,Linear-RAW,0.0023867088011102,0.1753795249482978,0.3507590498965956,indistinguishable,1.0,0.3437438688986637
+main,"C2: vs invariant linear, raw inputs",Stocks,DeepSetsP-RAW,Linear-RAW,-0.0258487614545961,3.301780622761485e-05,0.000165089031138,more accurate,0.023145482165558007,0.0006933739307799118
+main,"C2: vs invariant linear, raw inputs",Stocks,PENet-RAW,Linear-RAW,-0.0283166660439494,0.0022355900381462,0.0067067701144387,more accurate,1.0,0.01660628248467003
+main,"C2: vs invariant linear, raw inputs",Stocks,SetTransformer-RAW,Linear-RAW,-0.0203928845360263,0.0001074611117126,0.0004298444468506,more accurate,0.0738257837465562,0.001611916675689
+main,"C2: vs invariant linear, raw inputs",Stocks,SetGRU-RAW,Linear-RAW,-0.0039066403693817,0.760512637427665,0.760512637427665,indistinguishable,1.0,0.8184140388130801
+secondary,"H1: symmetric vs counterpart, $h=1$",ETF,DeepSets,MLP,-0.0022353731475595,0.3768932334892135,0.7488951540643989,indistinguishable,1.0,0.5045838371850127
+secondary,"H1: symmetric vs counterpart, $h=1$",ETF,PENet,MLP,-0.0026908455078573,0.3744475770321994,0.7488951540643989,indistinguishable,1.0,0.5040640460048839
+secondary,"H1: symmetric vs counterpart, $h=1$",ETF,SetTransformer,MLP,-0.0046543444668172,0.077830684370927,0.3113227374837082,indistinguishable,1.0,0.21505846997229827
+secondary,"H1: symmetric vs counterpart, $h=1$",ETF,SetGRU,GRU,-0.0119583935004582,0.0032680889494008,0.0163404447470042,more accurate,1.0,0.022449022222519512
+secondary,"H1: symmetric vs counterpart, $h=1$",ETF,EQCov,MLP,-0.0056412453536942,0.0889921563069881,0.3113227374837082,indistinguishable,1.0,0.23444170209905466
+secondary,"H1: symmetric vs counterpart, $h=1$",Stocks,DeepSets,MLP,-0.0072542072950137,0.0172294396932223,0.0321134974898529,more accurate,1.0,0.07721730594218532
+secondary,"H1: symmetric vs counterpart, $h=1$",Stocks,PENet,MLP,-0.0101013274399143,0.0024128052768454,0.0072384158305362,more accurate,1.0,0.017558533450310585
+secondary,"H1: symmetric vs counterpart, $h=1$",Stocks,SetTransformer,MLP,-0.0118337220699037,1.8707596538813937e-05,9.353798269406968e-05,more accurate,0.013188855559863825,0.00044355107922671756
+secondary,"H1: symmetric vs counterpart, $h=1$",Stocks,SetGRU,GRU,-0.0120937919402256,6.402814593528639e-05,0.0002561125837411,more accurate,0.04430747698721818,0.0010457930502763442
+secondary,"H1: symmetric vs counterpart, $h=1$",Stocks,EQCov,MLP,-0.0075351456942297,0.0160567487449264,0.0321134974898529,more accurate,1.0,0.07330254861814227
+secondary,"H1: symmetric vs counterpart, $h=5$",ETF,DeepSets,MLP,0.0017699149855679,0.4703092977218948,1.0,indistinguishable,1.0,0.5849709729884873
+secondary,"H1: symmetric vs counterpart, $h=5$",ETF,PENet,MLP,-0.0020896404341784,0.3553856396489677,1.0,indistinguishable,1.0,0.4882400843775538
+secondary,"H1: symmetric vs counterpart, $h=5$",ETF,SetTransformer,MLP,0.000489582351898,0.8757024178494621,1.0,indistinguishable,1.0,0.9068736626523569
+secondary,"H1: symmetric vs counterpart, $h=5$",ETF,SetGRU,GRU,-0.0103774488879586,0.0079310929665913,0.0396554648329567,more accurate,1.0,0.04449888038507333
+secondary,"H1: symmetric vs counterpart, $h=5$",ETF,EQCov,MLP,-0.010786509029498,0.0723262245977947,0.2893048983911789,indistinguishable,1.0,0.205391328928653
+secondary,"H1: symmetric vs counterpart, $h=5$",Stocks,DeepSets,MLP,-0.005139231419605,0.0578206344518737,0.1734619033556213,indistinguishable,1.0,0.18149196526743153
+secondary,"H1: symmetric vs counterpart, $h=5$",Stocks,PENet,MLP,-0.0060394115657864,0.0594387122977341,0.1734619033556213,indistinguishable,1.0,0.18251744212983176
+secondary,"H1: symmetric vs counterpart, $h=5$",Stocks,SetTransformer,MLP,-0.00716976867065,0.0366467610301301,0.1465870441205207,indistinguishable,1.0,0.1306634591974179
+secondary,"H1: symmetric vs counterpart, $h=5$",Stocks,SetGRU,GRU,-0.0086916573411718,0.0145841558432723,0.0729207792163616,indistinguishable,1.0,0.06827614359748498
+secondary,"H1: symmetric vs counterpart, $h=5$",Stocks,EQCov,MLP,-0.0041246371428782,0.1064067190141568,0.1734619033556213,indistinguishable,1.0,0.2571587485141924
+secondary,"H1: symmetric vs counterpart, $h=22$",ETF,DeepSets,MLP,0.0152955614796869,0.4001229034196839,1.0,indistinguishable,1.0,0.5269214677944396
+secondary,"H1: symmetric vs counterpart, $h=22$",ETF,PENet,MLP,0.0370627049856846,0.2600255961048736,1.0,indistinguishable,1.0,0.41655731679721364
+secondary,"H1: symmetric vs counterpart, $h=22$",ETF,SetTransformer,MLP,0.0414899336632039,0.2739993762932308,1.0,indistinguishable,1.0,0.42364652891239507
+secondary,"H1: symmetric vs counterpart, $h=22$",ETF,SetGRU,GRU,-0.0052636897030534,0.6473681289790004,1.0,indistinguishable,1.0,0.7343722685126214
+secondary,"H1: symmetric vs counterpart, $h=22$",ETF,EQCov,MLP,0.0400106997200628,0.2582389721797525,1.0,indistinguishable,1.0,0.416174993084248
+secondary,"H1: symmetric vs counterpart, $h=22$",Stocks,DeepSets,MLP,0.0057016692605554,0.4709443048203049,1.0,indistinguishable,1.0,0.5849709729884873
+secondary,"H1: symmetric vs counterpart, $h=22$",Stocks,PENet,MLP,0.0121394403497021,0.5477790593103693,1.0,indistinguishable,1.0,0.6520860538391654
+secondary,"H1: symmetric vs counterpart, $h=22$",Stocks,SetTransformer,MLP,3.9443246791342585e-05,0.9965000346713592,1.0,indistinguishable,1.0,0.9965000346713592
+secondary,"H1: symmetric vs counterpart, $h=22$",Stocks,SetGRU,GRU,-0.0074885058788105,0.1116621828713662,0.5583109143568312,indistinguishable,1.0,0.2638961556606243
+secondary,"H1: symmetric vs counterpart, $h=22$",Stocks,EQCov,MLP,-0.0043157437050014,0.5877572442113386,1.0,indistinguishable,1.0,0.6824669423307012
+secondary,"C1: symmetric vs invariant linear, $h=1$",ETF,DeepSets,Linear,-0.0061843179666878,0.0417252666987212,0.1580009150904546,indistinguishable,1.0,0.1446607123752834
+secondary,"C1: symmetric vs invariant linear, $h=1$",ETF,PENet,Linear,-0.0066397903269856,0.0834087990073318,0.1580009150904546,indistinguishable,1.0,0.22538774731760614
+secondary,"C1: symmetric vs invariant linear, $h=1$",ETF,SetTransformer,Linear,-0.0086032892859455,0.0395002287726136,0.1580009150904546,indistinguishable,1.0,0.1382508007041476
+secondary,"C1: symmetric vs invariant linear, $h=1$",ETF,SetGRU,Linear,-0.0163017401124857,0.013979495635196,0.0698974781759801,indistinguishable,1.0,0.06672032007707182
+secondary,"C1: symmetric vs invariant linear, $h=1$",ETF,EQCov,Linear,-0.0095901901728225,0.0678863070099382,0.1580009150904546,indistinguishable,1.0,0.1972191132502157
+secondary,"C1: symmetric vs invariant linear, $h=1$",Stocks,DeepSets,Linear,-0.0006309444303908,0.8241031051994503,1.0,indistinguishable,1.0,0.8665461835788211
+secondary,"C1: symmetric vs invariant linear, $h=1$",Stocks,PENet,Linear,-0.0034780645752914,0.3831467917931153,1.0,indistinguishable,1.0,0.5075424615457858
+secondary,"C1: symmetric vs invariant linear, $h=1$",Stocks,SetTransformer,Linear,-0.0052104592052808,0.1437721588284718,0.718860794142359,indistinguishable,1.0,0.303656714767031
+secondary,"C1: symmetric vs invariant linear, $h=1$",Stocks,SetGRU,Linear,0.0004208719129155,0.9331142495962328,1.0,indistinguishable,1.0,0.945984790969974
+secondary,"C1: symmetric vs invariant linear, $h=1$",Stocks,EQCov,Linear,-0.0009118828296068,0.789504936633603,1.0,indistinguishable,1.0,0.8409943890227509
+secondary,"C1: symmetric vs invariant linear, $h=5$",ETF,DeepSets,Linear,0.000607123414067,0.8049057079751992,1.0,indistinguishable,1.0,0.8536878720949082
+secondary,"C1: symmetric vs invariant linear, $h=5$",ETF,PENet,Linear,-0.0032524320056793,0.4305677769386693,1.0,indistinguishable,1.0,0.5512923198194178
+secondary,"C1: symmetric vs invariant linear, $h=5$",ETF,SetTransformer,Linear,-0.0006732092196027,0.8596732248049747,1.0,indistinguishable,1.0,0.8949855810646691
+secondary,"C1: symmetric vs invariant linear, $h=5$",ETF,SetGRU,Linear,5.626039557750293e-05,0.9936309344255704,1.0,indistinguishable,1.0,0.9963420693080413
+secondary,"C1: symmetric vs invariant linear, $h=5$",ETF,EQCov,Linear,-0.0119493006009989,0.1164028664619424,0.5820143323097121,indistinguishable,1.0,0.26820096191074505
+secondary,"C1: symmetric vs invariant linear, $h=5$",Stocks,DeepSets,Linear,0.0027701032568198,0.4711602938900469,1.0,indistinguishable,1.0,0.5849709729884873
+secondary,"C1: symmetric vs invariant linear, $h=5$",Stocks,PENet,Linear,0.0018699231106384,0.703724592622829,1.0,indistinguishable,1.0,0.7766329963630321
+secondary,"C1: symmetric vs invariant linear, $h=5$",Stocks,SetTransformer,Linear,0.0007395660057747,0.8890692428344253,1.0,indistinguishable,1.0,0.9139383125640596
+secondary,"C1: symmetric vs invariant linear, $h=5$",Stocks,SetGRU,Linear,0.0098826492210978,0.3240600093215051,1.0,indistinguishable,1.0,0.4589289149350795
+secondary,"C1: symmetric vs invariant linear, $h=5$",Stocks,EQCov,Linear,0.0037846975335465,0.2399549058988121,1.0,indistinguishable,1.0,0.39992484316468685
+secondary,"C1: symmetric vs invariant linear, $h=22$",ETF,DeepSets,Linear,0.0356365753947065,0.2453707720261942,1.0,indistinguishable,1.0,0.4052753200882084
+secondary,"C1: symmetric vs invariant linear, $h=22$",ETF,PENet,Linear,0.0574037189007042,0.2206139949715485,1.0,indistinguishable,1.0,0.38709570787242265
+secondary,"C1: symmetric vs invariant linear, $h=22$",ETF,SetTransformer,Linear,0.0618309475782236,0.2389150170545214,1.0,indistinguishable,1.0,0.39992484316468685
+secondary,"C1: symmetric vs invariant linear, $h=22$",ETF,SetGRU,Linear,0.0837304191043716,0.2147523479776421,1.0,indistinguishable,1.0,0.38355247543555343
+secondary,"C1: symmetric vs invariant linear, $h=22$",ETF,EQCov,Linear,0.0603517136350824,0.2242801648276382,1.0,indistinguishable,1.0,0.3906301449012182
+secondary,"C1: symmetric vs invariant linear, $h=22$",Stocks,DeepSets,Linear,0.0386181634653882,0.2042655054742757,1.0,indistinguishable,1.0,0.3772239862401825
+secondary,"C1: symmetric vs invariant linear, $h=22$",Stocks,PENet,Linear,0.0450559345545349,0.3071032103508632,1.0,indistinguishable,1.0,0.44258992079977344
+secondary,"C1: symmetric vs invariant linear, $h=22$",Stocks,SetTransformer,Linear,0.0329559374516241,0.2387914548824843,1.0,indistinguishable,1.0,0.39992484316468685
+secondary,"C1: symmetric vs invariant linear, $h=22$",Stocks,SetGRU,Linear,0.0235335997403267,0.289170108514177,1.0,indistinguishable,1.0,0.4330974255399312
+secondary,"C1: symmetric vs invariant linear, $h=22$",Stocks,EQCov,Linear,0.0286007504998313,0.3174095991862567,1.0,indistinguishable,1.0,0.45496270998706906
+secondary,"H2: symmetric vs best classical, $h=1$",ETF,DeepSets,HEAVY,-0.0068242198331154,0.2545583202841942,0.4229310375286974,indistinguishable,1.0,0.4130250892028316
+secondary,"H2: symmetric vs best classical, $h=1$",ETF,PENet,HEAVY,-0.0072796921934132,0.2114655187643487,0.4229310375286974,indistinguishable,1.0,0.38001749713049554
+secondary,"H2: symmetric vs best classical, $h=1$",ETF,SetTransformer,HEAVY,-0.0092431911523732,0.1157765230937554,0.402806496568563,indistinguishable,1.0,0.26820096191074505
+secondary,"H2: symmetric vs best classical, $h=1$",ETF,SetGRU,HEAVY,-0.0169416419789134,0.0078069496897133,0.0390347484485667,more accurate,1.0,0.04413929247645597
+secondary,"H2: symmetric vs best classical, $h=1$",ETF,EQCov,HEAVY,-0.0102300920392501,0.1007016241421407,0.402806496568563,indistinguishable,1.0,0.24921109004873207
+secondary,"H2: symmetric vs best classical, $h=1$",Stocks,DeepSets,HEAVY,-0.0060641560975074,0.2743615615813606,0.8148576967764849,indistinguishable,1.0,0.42364652891239507
+secondary,"H2: symmetric vs best classical, $h=1$",Stocks,PENet,HEAVY,-0.008911276242408,0.1463021964590481,0.5852087858361926,indistinguishable,1.0,0.3067202924190193
+secondary,"H2: symmetric vs best classical, $h=1$",Stocks,SetTransformer,HEAVY,-0.0106436708723974,0.0723759920986682,0.3618799604933414,indistinguishable,1.0,0.205391328928653
+secondary,"H2: symmetric vs best classical, $h=1$",Stocks,SetGRU,HEAVY,-0.0050123397542011,0.3795465107822334,0.8148576967764849,indistinguishable,1.0,0.506291625090638
+secondary,"H2: symmetric vs best classical, $h=1$",Stocks,EQCov,HEAVY,-0.0063450944967235,0.2716192322588283,0.8148576967764849,indistinguishable,1.0,0.42364652891239507
+secondary,"H2: symmetric vs best classical, $h=5$",ETF,DeepSets,HEAVY,0.0091960488389561,0.2321381763756606,1.0,indistinguishable,1.0,0.3958736882508365
+secondary,"H2: symmetric vs best classical, $h=5$",ETF,PENet,HEAVY,0.0053364934192097,0.4058934516467154,1.0,indistinguishable,1.0,0.5317855382537181
+secondary,"H2: symmetric vs best classical, $h=5$",ETF,SetTransformer,HEAVY,0.0079157162052863,0.3099860739178874,1.0,indistinguishable,1.0,0.44587038029285175
+secondary,"H2: symmetric vs best classical, $h=5$",ETF,SetGRU,HEAVY,0.0086451858204666,0.4104029323458377,1.0,indistinguishable,1.0,0.5357835795278698
+secondary,"H2: symmetric vs best classical, $h=5$",ETF,EQCov,HEAVY,-0.0033603751761098,0.5702681069717943,1.0,indistinguishable,1.0,0.6665117622159462
+secondary,"H2: symmetric vs best classical, $h=5$",Stocks,DeepSets,HEAVY,-0.0012783783073757,0.7970119874264093,1.0,indistinguishable,1.0,0.8465372987838307
+secondary,"H2: symmetric vs best classical, $h=5$",Stocks,PENet,HEAVY,-0.0021785584535571,0.6579622528351685,1.0,indistinguishable,1.0,0.7421809603978732
+secondary,"H2: symmetric vs best classical, $h=5$",Stocks,SetTransformer,HEAVY,-0.0033089155584208,0.5194636380855209,1.0,indistinguishable,1.0,0.6259111049063243
+secondary,"H2: symmetric vs best classical, $h=5$",Stocks,SetGRU,HEAVY,0.0058341676569023,0.5532065127622323,1.0,indistinguishable,1.0,0.6547613315301783
+secondary,"H2: symmetric vs best classical, $h=5$",Stocks,EQCov,HEAVY,-0.000263784030649,0.9578799389302386,1.0,indistinguishable,1.0,0.9644407604297608
+secondary,"H2: symmetric vs best classical, $h=22$",ETF,DeepSets,HAR,0.0862479749433605,0.3209891604926072,1.0,indistinguishable,1.0,0.45633855505235255
+secondary,"H2: symmetric vs best classical, $h=22$",ETF,PENet,HAR,0.1080151184493582,0.2904944384112555,1.0,indistinguishable,1.0,0.4330974255399312
+secondary,"H2: symmetric vs best classical, $h=22$",ETF,SetTransformer,HAR,0.1124423471268776,0.2926022628953351,1.0,indistinguishable,1.0,0.43487872874840044
+secondary,"H2: symmetric vs best classical, $h=22$",ETF,SetGRU,HAR,0.1343418186530255,0.2712847786048737,1.0,indistinguishable,1.0,0.42364652891239507
+secondary,"H2: symmetric vs best classical, $h=22$",ETF,EQCov,HAR,0.1109631131837364,0.2892064398433308,1.0,indistinguishable,1.0,0.4330974255399312
+secondary,"H2: symmetric vs best classical, $h=22$",Stocks,DeepSets,GJR,0.0676690235749243,0.1997701736742157,0.9988508683710786,indistinguishable,1.0,0.3726677097729658
+secondary,"H2: symmetric vs best classical, $h=22$",Stocks,PENet,GJR,0.0741067946640711,0.2624027723498094,0.9988508683710786,indistinguishable,1.0,0.41655731679721364
+secondary,"H2: symmetric vs best classical, $h=22$",Stocks,SetTransformer,GJR,0.0620067975611603,0.2189400967250658,0.9988508683710786,indistinguishable,1.0,0.38709570787242265
+secondary,"H2: symmetric vs best classical, $h=22$",Stocks,SetGRU,GJR,0.0525844598498629,0.2291342524402472,0.9988508683710786,indistinguishable,1.0,0.3929459165836058
+secondary,"H2: symmetric vs best classical, $h=22$",Stocks,EQCov,GJR,0.0576516106093675,0.2577774678369863,0.9988508683710786,indistinguishable,1.0,0.416174993084248
+secondary,"H2 (classical models without range-based variances), $h=1$",ETF,DeepSets,GJR,-0.0384439381868594,0.0001790713609968,0.0007162854439873,more accurate,0.12123131139483359,0.002230804242926237
+secondary,"H2 (classical models without range-based variances), $h=1$",ETF,PENet,GJR,-0.0388994105471571,0.0004096245323462,0.0009372856940383,more accurate,0.2732195630749154,0.004363391757600826
+secondary,"H2 (classical models without range-based variances), $h=1$",ETF,SetTransformer,GJR,-0.0408629095061171,0.0003124285646794,0.0009372856940383,more accurate,0.2096395668998774,0.0035328460775286
+secondary,"H2 (classical models without range-based variances), $h=1$",ETF,SetGRU,GJR,-0.0485613603326573,4.0988880668428856e-05,0.0002049444033421,more accurate,0.028692216467900197,0.0008332880387692718
+secondary,"H2 (classical models without range-based variances), $h=1$",ETF,EQCov,GJR,-0.041849810392994,0.0005449596064082,0.0009372856940383,more accurate,0.3602182998358202,0.005340604142800361
+secondary,"H2 (classical models without range-based variances), $h=1$",Stocks,DeepSets,GJR,-0.0335863668641653,0.0008519016887235,0.0016768791690696,more accurate,0.5545879993589985,0.007366444014256147
+secondary,"H2 (classical models without range-based variances), $h=1$",Stocks,PENet,GJR,-0.0364334870090659,0.0004495985989471,0.0013487957968415,more accurate,0.29898306829982146,0.0046542953552974435
+secondary,"H2 (classical models without range-based variances), $h=1$",Stocks,SetTransformer,GJR,-0.0381658816390553,0.0001635747596423,0.0007787113027522,more accurate,0.1110672617971217,0.0021092534795980793
+secondary,"H2 (classical models without range-based variances), $h=1$",Stocks,SetGRU,GJR,-0.0325345505208589,0.0001557422605504,0.0007787113027522,more accurate,0.1060604794348224,0.0020812829364462546
+secondary,"H2 (classical models without range-based variances), $h=1$",Stocks,EQCov,GJR,-0.0338673052633813,0.0008384395845348,0.0016768791690696,more accurate,0.5475010487012244,0.007366444014256147
+secondary,"H2 (classical models without range-based variances), $h=5$",ETF,DeepSets,DCC,-0.0126835099647313,0.3562190261453706,1.0,indistinguishable,1.0,0.48847198547919285
+secondary,"H2 (classical models without range-based variances), $h=5$",ETF,PENet,DCC,-0.0165430653844777,0.261109779626286,1.0,indistinguishable,1.0,0.41655731679721364
+secondary,"H2 (classical models without range-based variances), $h=5$",ETF,SetTransformer,DCC,-0.0139638425984012,0.3220898874789188,1.0,indistinguishable,1.0,0.4570194349363037
+secondary,"H2 (classical models without range-based variances), $h=5$",ETF,SetGRU,DCC,-0.0132343729832209,0.2660468648423564,1.0,indistinguishable,1.0,0.41872472303882646
+secondary,"H2 (classical models without range-based variances), $h=5$",ETF,EQCov,DCC,-0.0252399339797973,0.0883241529781847,0.4416207648909235,indistinguishable,1.0,0.23351889366534442
+secondary,"H2 (classical models without range-based variances), $h=5$",Stocks,DeepSets,GJR,-0.0224980590501228,0.0132090448092633,0.0516526534135929,indistinguishable,1.0,0.06387268378163503
+secondary,"H2 (classical models without range-based variances), $h=5$",Stocks,PENet,GJR,-0.0233982391963042,0.012663936403296,0.0516526534135929,indistinguishable,1.0,0.062053288376150394
+secondary,"H2 (classical models without range-based variances), $h=5$",Stocks,SetTransformer,GJR,-0.0245285963011679,0.0103305306827185,0.0516526534135929,indistinguishable,1.0,0.05272875035970901
+secondary,"H2 (classical models without range-based variances), $h=5$",Stocks,SetGRU,GJR,-0.0153855130858448,0.1564848348153973,0.1564848348153973,indistinguishable,1.0,0.32100398910438943
+secondary,"H2 (classical models without range-based variances), $h=5$",Stocks,EQCov,GJR,-0.0214834647733961,0.0150989135993371,0.0516526534135929,indistinguishable,1.0,0.07023861706020738
+secondary,H1: minimum-variance portfolios,ETF,DeepSets,MLP,-9.353679553025353e-08,0.4265180232206484,1.0,indistinguishable,1.0,0.5490205727971569
+secondary,H1: minimum-variance portfolios,ETF,PENet,MLP,-1.313345448030384e-07,0.2332085063948613,1.0,indistinguishable,1.0,0.3967783615745904
+secondary,H1: minimum-variance portfolios,ETF,SetTransformer,MLP,-1.0326952494182892e-07,0.238960928582639,1.0,indistinguishable,1.0,0.39992484316468685
+secondary,H1: minimum-variance portfolios,ETF,SetGRU,GRU,-1.6780991088696148e-07,0.2753937149877736,1.0,indistinguishable,1.0,0.424348806113236
+secondary,H1: minimum-variance portfolios,ETF,EQCov,MLP,-1.789561040135988e-07,0.2934691829376961,1.0,indistinguishable,1.0,0.43487872874840044
+secondary,H1: minimum-variance portfolios,Stocks,DeepSets,MLP,-4.144990539882593e-06,6.347338839237144e-05,0.0003173669419618,more accurate,0.04398705815591341,0.0010457930502763442
+secondary,H1: minimum-variance portfolios,Stocks,PENet,MLP,-6.722225882242771e-06,0.0020065767594839,0.0060197302784518,more accurate,1.0,0.015204473383718213
+secondary,H1: minimum-variance portfolios,Stocks,SetTransformer,MLP,-6.465265212022418e-06,0.0080761494226524,0.0161522988453049,more accurate,1.0,0.044969468376132686
+secondary,H1: minimum-variance portfolios,Stocks,SetGRU,GRU,-6.141276758074037e-06,0.0004439890971456,0.0017759563885825,more accurate,0.2956967386989696,0.0046542953552974435
+secondary,H1: minimum-variance portfolios,Stocks,EQCov,MLP,-2.3681876732191733e-06,0.0201354955100813,0.0201354955100813,more accurate,1.0,0.08604412325528928
+secondary,"H1: volatility targeting, $h=1$",ETF,DeepSets,MLP,0.0003933179522259,0.5033404555398158,1.0,indistinguishable,1.0,0.610487186174529
+secondary,"H1: volatility targeting, $h=1$",ETF,PENet,MLP,0.0005522863447069,0.5143931229871342,1.0,indistinguishable,1.0,0.6218403707163547
+secondary,"H1: volatility targeting, $h=1$",ETF,SetTransformer,MLP,0.0005258838956131,0.5703889774609935,1.0,indistinguishable,1.0,0.6665117622159462
+secondary,"H1: volatility targeting, $h=1$",ETF,SetGRU,GRU,-0.0008410881482666,0.4756987045570005,1.0,indistinguishable,1.0,0.588617083921541
+secondary,"H1: volatility targeting, $h=1$",ETF,EQCov,MLP,0.0016979734919273,0.1125083643318115,0.5625418216590576,indistinguishable,1.0,0.2650437428970559
+secondary,"H1: volatility targeting, $h=1$",Stocks,DeepSets,MLP,-0.001417398665616,0.2534103649558611,1.0,indistinguishable,1.0,0.4125155220949134
+secondary,"H1: volatility targeting, $h=1$",Stocks,PENet,MLP,-0.0013557740733155,0.2805772909143871,1.0,indistinguishable,1.0,0.4260832826902366
+secondary,"H1: volatility targeting, $h=1$",Stocks,SetTransformer,MLP,-0.001090505395163,0.4006509968153244,1.0,indistinguishable,1.0,0.5269214677944396
+secondary,"H1: volatility targeting, $h=1$",Stocks,SetGRU,GRU,-0.0008278745305434,0.2952964169813929,1.0,indistinguishable,1.0,0.4349738929030714
+secondary,"H1: volatility targeting, $h=1$",Stocks,EQCov,MLP,-0.001978190669793,0.1146915444449263,0.5734577222246316,indistinguishable,1.0,0.267613603704828
+secondary,"H1: volatility targeting, $h=5$",ETF,DeepSets,MLP,0.001994763625515,0.1667764237225004,0.6671056948900016,indistinguishable,1.0,0.3341208179942966
+secondary,"H1: volatility targeting, $h=5$",ETF,PENet,MLP,0.0008080831470522,0.3517695628696333,0.7917029059416397,indistinguishable,1.0,0.4867601080016105
+secondary,"H1: volatility targeting, $h=5$",ETF,SetTransformer,MLP,0.0012437089834557,0.2639009686472132,0.7917029059416397,indistinguishable,1.0,0.41668533711664346
+secondary,"H1: volatility targeting, $h=5$",ETF,SetGRU,GRU,-0.0037514741038421,0.0319540155278553,0.1597700776392765,indistinguishable,1.0,0.11689380792132958
+secondary,"H1: volatility targeting, $h=5$",ETF,EQCov,MLP,-0.0020598132450024,0.4502469009931186,0.7917029059416397,indistinguishable,1.0,0.5676354583703983
+secondary,"H1: volatility targeting, $h=5$",Stocks,DeepSets,MLP,-0.000732063320382,0.5627581059825677,1.0,indistinguishable,1.0,0.6612857870751093
+secondary,"H1: volatility targeting, $h=5$",Stocks,PENet,MLP,-0.0016543132526018,0.239913422532685,0.9596536901307402,indistinguishable,1.0,0.39992484316468685
+secondary,"H1: volatility targeting, $h=5$",Stocks,SetTransformer,MLP,-0.0008340351513699,0.5826800870899065,1.0,indistinguishable,1.0,0.6787161077830131
+secondary,"H1: volatility targeting, $h=5$",Stocks,SetGRU,GRU,-0.001571630368339,0.2856943334185052,0.9596536901307402,indistinguishable,1.0,0.4320685906637887
+secondary,"H1: volatility targeting, $h=5$",Stocks,EQCov,MLP,-0.0022210864279354,0.0505238671858227,0.2526193359291139,indistinguishable,1.0,0.16727496568279135
+secondary,"H1: volatility targeting, $h=22$",ETF,DeepSets,MLP,-0.0003239077256265,0.902889662993634,1.0,indistinguishable,1.0,0.9242672733987758
+secondary,"H1: volatility targeting, $h=22$",ETF,PENet,MLP,0.0049632982341512,0.2409375640666935,1.0,indistinguishable,1.0,0.40065409409280484
+secondary,"H1: volatility targeting, $h=22$",ETF,SetTransformer,MLP,0.0046621564313958,0.4573772935987535,1.0,indistinguishable,1.0,0.574653522726639
+secondary,"H1: volatility targeting, $h=22$",ETF,SetGRU,GRU,-0.0044344083710351,0.3823473084123643,1.0,indistinguishable,1.0,0.5075424615457858
+secondary,"H1: volatility targeting, $h=22$",ETF,EQCov,MLP,0.0027087019562078,0.61973533828849,1.0,indistinguishable,1.0,0.710616963560125
+secondary,"H1: volatility targeting, $h=22$",Stocks,DeepSets,MLP,-0.001158544458685,0.759284605493934,0.8714428644971286,indistinguishable,1.0,0.8182905938974215
+secondary,"H1: volatility targeting, $h=22$",Stocks,PENet,MLP,-0.0022509379834863,0.2961808308355587,0.8714428644971286,indistinguishable,1.0,0.43538582132827125
+secondary,"H1: volatility targeting, $h=22$",Stocks,SetTransformer,MLP,-0.0041127119198391,0.2904809548323762,0.8714428644971286,indistinguishable,1.0,0.4330974255399312
+secondary,"H1: volatility targeting, $h=22$",Stocks,SetGRU,GRU,-0.0036554773485571,0.1176982009875278,0.4707928039501114,indistinguishable,1.0,0.2699761756969333
+secondary,"H1: volatility targeting, $h=22$",Stocks,EQCov,MLP,-0.0084954634100834,0.0010182941462044,0.0050914707310221,more accurate,0.6578180184480424,0.008316068860669266
+secondary,H2: minimum-variance portfolios,ETF,DeepSets,EWMANLS,1.4681612132107726e-07,0.3505111690570426,1.0,indistinguishable,1.0,0.48608624388099303
+secondary,H2: minimum-variance portfolios,ETF,PENet,EWMANLS,1.0901837204829234e-07,0.4416868785289124,1.0,indistinguishable,1.0,0.5597238891702597
+secondary,H2: minimum-variance portfolios,ETF,SetTransformer,EWMANLS,1.370833919095018e-07,0.2991595222508333,1.0,indistinguishable,1.0,0.43714164782179415
+secondary,H2: minimum-variance portfolios,ETF,SetGRU,EWMANLS,5.530991546900028e-08,0.652485788294109,1.0,indistinguishable,1.0,0.7378108529171847
+secondary,H2: minimum-variance portfolios,ETF,EQCov,EWMANLS,6.139681283773186e-08,0.552293196709287,1.0,indistinguishable,1.0,0.654734676744074
+secondary,H2: minimum-variance portfolios,Stocks,DeepSets,LW,-9.614210650064858e-07,0.69351036680288,1.0,indistinguishable,1.0,0.7676658427712603
+secondary,H2: minimum-variance portfolios,Stocks,PENet,LW,-3.538656407366663e-06,0.4007470755062473,1.0,indistinguishable,1.0,0.5269214677944396
+secondary,H2: minimum-variance portfolios,Stocks,SetTransformer,LW,-3.2816957371463105e-06,0.4682318480255878,1.0,indistinguishable,1.0,0.5842961091660561
+secondary,H2: minimum-variance portfolios,Stocks,SetGRU,LW,-2.737827946514155e-06,0.4511238970174864,1.0,indistinguishable,1.0,0.567767233403857
+secondary,H2: minimum-variance portfolios,Stocks,EQCov,LW,8.15381801656934e-07,0.783247380198477,1.0,indistinguishable,1.0,0.8355396581217425
+secondary,"H2: volatility targeting, $h=1$",ETF,DeepSets,HEAVY,0.0055092786772389,0.0392570406054834,0.0801379198451768,indistinguishable,1.0,0.13805705667478613
+secondary,"H2: volatility targeting, $h=1$",ETF,PENet,HEAVY,0.0056682470697199,0.0169976672834227,0.0801379198451768,indistinguishable,1.0,0.07664592302647659
+secondary,"H2: volatility targeting, $h=1$",ETF,SetTransformer,HEAVY,0.0056418446206261,0.0199211464433062,0.0801379198451768,indistinguishable,1.0,0.08604412325528928
+secondary,"H2: volatility targeting, $h=1$",ETF,SetGRU,HEAVY,0.0024638911212948,0.1348664696456387,0.1348664696456387,indistinguishable,1.0,0.2915495740868954
+secondary,"H2: volatility targeting, $h=1$",ETF,EQCov,HEAVY,0.0068139342169403,0.0160275839690353,0.0801379198451768,indistinguishable,1.0,0.07330254861814227
+secondary,"H2: volatility targeting, $h=1$",Stocks,DeepSets,HEAVY,0.0080671923889804,0.0017192955656067,0.003495900905306,less accurate,1.0,0.013163356674176297
+secondary,"H2: volatility targeting, $h=1$",Stocks,PENet,HEAVY,0.008128816981281,0.0011336151607847,0.003495900905306,less accurate,0.7300481635453467,0.009056599382356027
+secondary,"H2: volatility targeting, $h=1$",Stocks,SetTransformer,HEAVY,0.0083940856594334,0.0002333678321354,0.0011668391606771,less accurate,0.1577566545235304,0.00285875594365865
+secondary,"H2: volatility targeting, $h=1$",Stocks,SetGRU,HEAVY,0.0078925625435841,0.0008739752263265,0.003495900905306,less accurate,0.568083897112225,0.007456745769006172
+secondary,"H2: volatility targeting, $h=1$",Stocks,EQCov,HEAVY,0.0075064003848034,0.0097675287865864,0.0097675287865864,less accurate,1.0,0.050915841547099314
+secondary,"H2: volatility targeting, $h=5$",ETF,DeepSets,HEAVY,0.0083684359853146,0.074404817920635,0.2934514184044354,indistinguishable,1.0,0.20873107317430048
+secondary,"H2: volatility targeting, $h=5$",ETF,PENet,HEAVY,0.0071817555068518,0.05405962298337,0.2702981149168503,indistinguishable,1.0,0.176134584455523
+secondary,"H2: volatility targeting, $h=5$",ETF,SetTransformer,HEAVY,0.0076173813432553,0.0733628546011088,0.2934514184044354,indistinguishable,1.0,0.2073911466608268
+secondary,"H2: volatility targeting, $h=5$",ETF,SetGRU,HEAVY,0.0063573411400094,0.1530519598969284,0.2934514184044354,indistinguishable,1.0,0.315992108214164
+secondary,"H2: volatility targeting, $h=5$",ETF,EQCov,HEAVY,0.0043138591147971,0.1290393854265743,0.2934514184044354,indistinguishable,1.0,0.2816261894445755
+secondary,"H2: volatility targeting, $h=5$",Stocks,DeepSets,HEAVY,0.004888413823537,0.1056756858381246,0.5212426130053606,indistinguishable,1.0,0.25634201020139136
+secondary,"H2: volatility targeting, $h=5$",Stocks,PENet,HEAVY,0.0039661638913172,0.1433289174636786,0.5212426130053606,indistinguishable,1.0,0.30359295197637975
+secondary,"H2: volatility targeting, $h=5$",Stocks,SetTransformer,HEAVY,0.0047864419925491,0.1042485226010721,0.5212426130053606,indistinguishable,1.0,0.25530016724838345
+secondary,"H2: volatility targeting, $h=5$",Stocks,SetGRU,HEAVY,0.0052788308500787,0.209981694903676,0.5212426130053606,indistinguishable,1.0,0.38001749713049554
+secondary,"H2: volatility targeting, $h=5$",Stocks,EQCov,HEAVY,0.0033993907159836,0.3026358551966137,0.5212426130053606,indistinguishable,1.0,0.4387324527998246
+secondary,"H2: volatility targeting, $h=22$",ETF,DeepSets,GARCH,0.0091172889516118,0.1944748563033238,0.28350526266263,indistinguishable,1.0,0.36464035556873214
+secondary,"H2: volatility targeting, $h=22$",ETF,PENet,GARCH,0.0144044949113895,0.0362026123380301,0.1810130616901506,indistinguishable,1.0,0.12979961009001034
+secondary,"H2: volatility targeting, $h=22$",ETF,SetTransformer,GARCH,0.0141033531086342,0.0683156317770615,0.2732625271082463,indistinguishable,1.0,0.1976849974651189
+secondary,"H2: volatility targeting, $h=22$",ETF,SetGRU,GARCH,0.0111858567845787,0.0945017542208766,0.28350526266263,indistinguishable,1.0,0.23659603181095723
+secondary,"H2: volatility targeting, $h=22$",ETF,EQCov,GARCH,0.0121498986334462,0.1025976010038177,0.28350526266263,indistinguishable,1.0,0.2522048051431639
+secondary,"H2: volatility targeting, $h=22$",Stocks,DeepSets,GARCH,0.0070220240721642,0.3205814833486551,1.0,indistinguishable,1.0,0.45633855505235255
+secondary,"H2: volatility targeting, $h=22$",Stocks,PENet,GARCH,0.005929630547363,0.326279384246256,1.0,indistinguishable,1.0,0.4602981716333938
+secondary,"H2: volatility targeting, $h=22$",Stocks,SetTransformer,GARCH,0.0040678566110102,0.5216500972901406,1.0,indistinguishable,1.0,0.6275168928121986
+secondary,"H2: volatility targeting, $h=22$",Stocks,SetGRU,GARCH,0.0004724456752909,0.931003605309513,1.0,indistinguishable,1.0,0.9451486877106243
+secondary,"H2: volatility targeting, $h=22$",Stocks,EQCov,GARCH,-0.0003148948792341,0.9572801419987852,1.0,indistinguishable,1.0,0.9644407604297608
+secondary,G1: advantage grows with $N$,ETF,DeepSets,HEAVY,0.0012898645685138,0.7364864800185447,1.0,indistinguishable,1.0,0.8016657254017356
+secondary,G1: advantage grows with $N$,ETF,PENet,HEAVY,7.059615364740006e-05,0.984059332326583,1.0,indistinguishable,1.0,0.9880923623771019
+secondary,G1: advantage grows with $N$,ETF,SetTransformer,HEAVY,0.0004638427770274,0.9074783763598706,1.0,indistinguishable,1.0,0.9274197653182682
+secondary,G1: advantage grows with $N$,ETF,SetGRU,HEAVY,2.2293132221951143e-05,0.9954641765941988,1.0,indistinguishable,1.0,0.9965000346713592
+secondary,G1: advantage grows with $N$,ETF,EQCov,HEAVY,-0.001973447402989,0.5371927024293479,1.0,indistinguishable,1.0,0.6430564108885516
+secondary,G1: advantage grows with $N$,Stocks,DeepSets,HEAVY,0.0075051939909784,0.0978754566906549,0.3207225863412695,indistinguishable,1.0,0.24385918870383508
+secondary,G1: advantage grows with $N$,Stocks,PENet,HEAVY,0.0072686138090908,0.0801806465853173,0.3207225863412695,indistinguishable,1.0,0.21989841507540378
+secondary,G1: advantage grows with $N$,Stocks,SetTransformer,HEAVY,0.0079132884465602,0.0612403821690075,0.306201910845038,indistinguishable,1.0,0.1859986813810765
+secondary,G1: advantage grows with $N$,Stocks,SetGRU,HEAVY,0.003821365042506,0.3692806820980233,0.7385613641960467,indistinguishable,1.0,0.5017029599668154
+secondary,G1: advantage grows with $N$,Stocks,EQCov,HEAVY,0.0013694011846073,0.7161336598541173,0.7385613641960467,indistinguishable,1.0,0.788726609557753
+secondary,"G1: long--short weights, $h=5$",ETF,DeepSets,MLP,0.0089285530016115,0.1067121337371819,0.5335606686859095,indistinguishable,1.0,0.2571587485141924
+secondary,"G1: long--short weights, $h=5$",ETF,PENet,MLP,0.0078875933945934,0.1495231265700393,0.5980925062801572,indistinguishable,1.0,0.31045055940389515
+secondary,"G1: long--short weights, $h=5$",ETF,SetTransformer,MLP,0.0034751671538377,0.1668331159236828,0.5980925062801572,indistinguishable,1.0,0.3341208179942966
+secondary,"G1: long--short weights, $h=5$",ETF,SetGRU,GRU,-0.0049646788955839,0.1806603045701579,0.5980925062801572,indistinguishable,1.0,0.35128392555308474
+secondary,"G1: long--short weights, $h=5$",ETF,EQCov,MLP,-0.0016553382080456,0.7636238097457304,0.7636238097457304,indistinguishable,1.0,0.8192168040957938
+secondary,"G1: long--short weights, $h=5$",Stocks,DeepSets,MLP,-0.0069191231198155,0.0368375656745272,0.1105126970235818,indistinguishable,1.0,0.1306634591974179
+secondary,"G1: long--short weights, $h=5$",Stocks,PENet,MLP,-0.0150373737055216,1.06039429400921e-06,5.301971470046049e-06,more accurate,0.000757121525922576,3.542680936803497e-05
+secondary,"G1: long--short weights, $h=5$",Stocks,SetTransformer,MLP,-0.0053575003811546,0.092229541556116,0.1844590831122321,indistinguishable,1.0,0.23659603181095723
+secondary,"G1: long--short weights, $h=5$",Stocks,SetGRU,GRU,-0.0129986271011372,0.0050890380037477,0.0203561520149909,more accurate,1.0,0.030431834693390693
+secondary,"G1: long--short weights, $h=5$",Stocks,EQCov,MLP,0.0126694370576625,0.3384003103440952,0.3384003103440952,indistinguishable,1.0,0.47285974924507596
+secondary,"G1: unseen assets, $h=5$",ETF,DeepSets,MLP,-0.001072497512498,0.7179021793117507,1.0,indistinguishable,1.0,0.788726609557753
+secondary,"G1: unseen assets, $h=5$",ETF,PENet,MLP,-0.0018755902831105,0.3175454016644441,1.0,indistinguishable,1.0,0.45496270998706906
+secondary,"G1: unseen assets, $h=5$",ETF,SetTransformer,MLP,0.0035887857212878,0.3495202440009995,1.0,indistinguishable,1.0,0.4856283163340919
+secondary,"G1: unseen assets, $h=5$",ETF,SetGRU,GRU,-0.0113443561218678,0.0437432322637528,0.218716161318764,indistinguishable,1.0,0.14884849867526992
+secondary,"G1: unseen assets, $h=5$",ETF,EQCov,MLP,-0.0036799123561684,0.6601001212648732,1.0,indistinguishable,1.0,0.7421809603978732
+secondary,"G1: unseen assets, $h=5$",Stocks,DeepSets,MLP,-0.0047041057924164,0.1784787505196587,0.6459752534463268,indistinguishable,1.0,0.34796255074787574
+secondary,"G1: unseen assets, $h=5$",Stocks,PENet,MLP,-0.0014759772992061,0.7584636580757229,1.0,indistinguishable,1.0,0.8182905938974215
+secondary,"G1: unseen assets, $h=5$",Stocks,SetTransformer,MLP,-0.0046583925731982,0.1614938133615817,0.6459752534463268,indistinguishable,1.0,0.3288031934093146
+secondary,"G1: unseen assets, $h=5$",Stocks,SetGRU,GRU,-0.0067129353289867,0.0807031297419607,0.4035156487098038,indistinguishable,1.0,0.22026923550358615
+secondary,"G1: unseen assets, $h=5$",Stocks,EQCov,MLP,0.0008989303792433,0.7384050287033674,1.0,indistinguishable,1.0,0.8016657254017356
+secondary,G2: short training history,ETF,DeepSets,MLP,0.0166798153991029,0.0028540799572991,0.0114163198291964,less accurate,1.0,0.019909841647178458
+secondary,G2: short training history,ETF,SetTransformer,MLP,0.0231005709986198,0.0081499753690801,0.0244499261072405,less accurate,1.0,0.04503933756596897
+secondary,G2: short training history,ETF,EQCov,MLP,0.0392345606965704,0.0100838702219873,0.0244499261072405,less accurate,1.0,0.05182968260951514
+secondary,G2: short training history,ETF,SetGRU,GRU,0.0225758004108706,0.015425247831609,0.0244499261072405,less accurate,1.0,0.07130539091970198
+secondary,G2: short training history,ETF,DeepSets,MLP,0.0027012040882416,0.5393011957733114,0.8248564494858763,indistinguishable,1.0,0.644530697387616
+secondary,G2: short training history,ETF,SetTransformer,MLP,0.0036427509117548,0.4124282247429381,0.8248564494858763,indistinguishable,1.0,0.5373773201516572
+secondary,G2: short training history,ETF,EQCov,MLP,0.0139224165040144,0.1045514970636237,0.3136544911908711,indistinguishable,1.0,0.25530016724838345
+secondary,G2: short training history,ETF,SetGRU,GRU,0.0287281089980169,0.0007263775404901,0.0029055101619605,less accurate,0.4750509114805254,0.006510823076344189
+secondary,G2: short training history,Stocks,DeepSets,MLP,0.0088610640469997,0.1315339580552803,0.3946018741658411,indistinguishable,1.0,0.28518424534109443
+secondary,G2: short training history,Stocks,SetTransformer,MLP,0.0029372550693602,0.5411519490153702,1.0,indistinguishable,1.0,0.645692666438794
+secondary,G2: short training history,Stocks,EQCov,MLP,0.0028674612028268,0.6139942731395152,1.0,indistinguishable,1.0,0.706237544221508
+secondary,G2: short training history,Stocks,SetGRU,GRU,0.0121094831744731,0.0140877311780852,0.0563509247123409,indistinguishable,1.0,0.06680311236059756
+secondary,G2: short training history,Stocks,DeepSets,MLP,0.0167801334169932,0.3347052928166285,1.0,indistinguishable,1.0,0.4685874099432799
+secondary,G2: short training history,Stocks,SetTransformer,MLP,0.0091292052159248,0.4729531612947161,1.0,indistinguishable,1.0,0.5862067007615789
+secondary,G2: short training history,Stocks,EQCov,MLP,0.0014446634482274,0.8927133586592053,1.0,indistinguishable,1.0,0.9164026796292122
+secondary,G2: short training history,Stocks,SetGRU,GRU,0.0173551903582481,0.0326530613236658,0.1306122452946634,indistinguishable,1.0,0.11881188154898199
+secondary,A1: larger advantage than with summaries,ETF,DeepSets,MLP,-0.0194773727051252,0.0005089568567505,0.0005089568567505,more accurate,0.33692943916883106,0.005055179590697534
+secondary,A1: larger advantage than with summaries,ETF,PENet,MLP,-0.0243276807802625,1.2537170905281737e-15,5.014868362112695e-15,more accurate,9.139597589950386e-13,1.3164029450545824e-13
+secondary,A1: larger advantage than with summaries,ETF,SetTransformer,MLP,-0.0183505655841673,2.0915434805521863e-06,4.1830869611043725e-06,more accurate,0.0014912705016337088,6.683845470460247e-05
+secondary,A1: larger advantage than with summaries,ETF,SetGRU,GRU,-0.0956497720622492,1.4299095452743642e-09,4.289728635823093e-09,more accurate,1.0352545107786397e-06,8.75819596480548e-08
+secondary,A1: larger advantage than with summaries,Stocks,DeepSets,MLP,0.0025923707384058,0.6603895892519851,0.6603895892519851,indistinguishable,1.0,0.7421809603978732
+secondary,A1: larger advantage than with summaries,Stocks,PENet,MLP,-0.0272108239604724,2.021645359164952e-14,8.08658143665981e-14,more accurate,1.4717578214720852e-11,1.8573866737328e-12
+secondary,A1: larger advantage than with summaries,Stocks,SetTransformer,MLP,-0.0181566853476856,9.10245988582772e-06,2.730737965748316e-05,more accurate,0.006453644059051853,0.00024778918578086573
+secondary,A1: larger advantage than with summaries,Stocks,SetGRU,GRU,-0.0242363733828651,0.0105197301926157,0.0210394603852314,more accurate,1.0,0.05332414959705199
+secondary,A2: larger advantage with 50 than 500,ETF,DeepSets,MLP,-0.0159939043196735,0.0008464490388577,0.0016928980777155,more accurate,0.5518847733352205,0.007366444014256147
+secondary,A2: larger advantage with 50 than 500,ETF,PENet,MLP,-0.0187845123082086,2.054643761672656e-05,8.218575046690623e-05,more accurate,0.014464692082175499,0.0004719259890091882
+secondary,A2: larger advantage with 50 than 500,ETF,SetTransformer,MLP,-0.0180232745934766,0.0001678745067644,0.0005036235202934,more accurate,0.1138189155862632,0.0021273752150316205
+secondary,A2: larger advantage with 50 than 500,ETF,SetGRU,GRU,-0.0010277596170551,0.8760276197049979,0.8760276197049979,indistinguishable,1.0,0.9068736626523569
+secondary,A2: larger advantage with 50 than 500,ETF,EQCov,MLP,-0.0160368819000952,5.990591946338544e-06,2.995295973169272e-05,more accurate,0.004259310873846705,0.0001761234032223532
+secondary,A2: larger advantage with 50 than 500,Stocks,DeepSets,MLP,-0.0149243656896869,1.4242963201557605e-05,5.8333554363719465e-05,more accurate,0.010055532020299669,0.0003489525984381613
+secondary,A2: larger advantage with 50 than 500,Stocks,PENet,MLP,-0.0154377491315919,1.1666710872743892e-05,5.8333554363719465e-05,more accurate,0.008260031297902676,0.0003062511604095272
+secondary,A2: larger advantage with 50 than 500,Stocks,SetTransformer,MLP,-0.0129108835046294,0.0004065587320532,0.0012196761961598,more accurate,0.27158123301153764,0.004363391757600826
+secondary,A2: larger advantage with 50 than 500,Stocks,SetGRU,GRU,-0.0042550980353758,0.011598951016598,0.011598951016598,more accurate,1.0,0.05799475508299
+secondary,A2: larger advantage with 50 than 500,Stocks,EQCov,MLP,-0.0129787377735757,0.0052013351674338,0.0104026703348676,more accurate,1.0,0.030830494742450348
+secondary,A3: portfolios with $N>20$,ETF,DeepSets-N54,MLP-N54,0.0010547374447815,0.8794968118231028,1.0,indistinguishable,1.0,0.9085672099708261
+secondary,A3: portfolios with $N>20$,ETF,PENet-N54,MLP-N54,-0.0027492378079589,0.662698921574743,1.0,indistinguishable,1.0,0.7425056514595062
+secondary,A3: portfolios with $N>20$,ETF,SetTransformer-N54,MLP-N54,0.0060045096760765,0.3762679745748127,1.0,indistinguishable,1.0,0.5045838371850127
+secondary,A3: portfolios with $N>20$,ETF,EQCov-N54,MLP-N54,0.009559533185321,0.3826795690726914,1.0,indistinguishable,1.0,0.5075424615457858
+secondary,A3: portfolios with $N>20$,Stocks,DeepSets-N54,MLP-N54,-0.0141865341447211,0.0582749711606991,0.1748249134820975,indistinguishable,1.0,0.18149196526743153
+secondary,A3: portfolios with $N>20$,Stocks,PENet-N54,MLP-N54,-0.0135299575667966,0.1115407883797874,0.1748249134820975,indistinguishable,1.0,0.2638961556606243
+secondary,A3: portfolios with $N>20$,Stocks,SetTransformer-N54,MLP-N54,-0.015125252985715,0.0768289000641909,0.1748249134820975,indistinguishable,1.0,0.21382357344641115
+secondary,A3: portfolios with $N>20$,Stocks,EQCov-N54,MLP-N54,-0.0180252872794444,0.025993172749671,0.1039726909986842,indistinguishable,1.0,0.10497242841213289
+secondary,"Deep Sets + pairs vs MLP, raw inputs",ETF,DeepSetsP-RAW,MLP-RAW,-0.030290909838335,4.5348942218607065e-10,4.5348942218607065e-10,more accurate,3.287798310849012e-07,3.030133866425108e-08
+secondary,"Deep Sets + pairs vs MLP, raw inputs",Stocks,DeepSetsP-RAW,MLP-RAW,-0.0307823309369055,4.1296951234010883e-22,4.1296951234010883e-22,more accurate,3.0270665254529975e-19,1.0117753052332667e-19
+secondary,"C3: symmetric vs GBM, $h=1$",ETF,DeepSets,GBM,-0.0168507517972268,0.009483580398232,0.0189671607964641,more accurate,1.0,0.05014698987554331
+secondary,"C3: symmetric vs GBM, $h=1$",ETF,PENet,GBM,-0.0173062241575246,0.0127657182448026,0.0189671607964641,more accurate,1.0,0.06213776761542987
+secondary,"C3: symmetric vs GBM, $h=1$",ETF,SetTransformer,GBM,-0.0192697231164845,0.0050280956679928,0.0186657761603372,more accurate,1.0,0.030431834693390693
+secondary,"C3: symmetric vs GBM, $h=1$",ETF,SetGRU,GBM,-0.0269681739430247,0.000641741622975,0.0032087081148752,more accurate,0.42162424629457496,0.005970634087172468
+secondary,"C3: symmetric vs GBM, $h=1$",ETF,EQCov,GBM,-0.0202566240033615,0.0046664440400843,0.0186657761603372,more accurate,1.0,0.02882215436522656
+secondary,"C3: symmetric vs GBM, $h=1$",Stocks,DeepSets,GBM,-0.0184437487481754,5.558241507545408e-05,0.0001667472452263,more accurate,0.038629778477440584,0.0009964164653770426
+secondary,"C3: symmetric vs GBM, $h=1$",Stocks,PENet,GBM,-0.021290868893076,8.696805224907395e-06,3.478722089962958e-05,more accurate,0.006174731709684251,0.00024585199385795904
+secondary,"C3: symmetric vs GBM, $h=1$",Stocks,SetTransformer,GBM,-0.0230232635230654,4.787707851049974e-07,2.3938539255249877e-06,more accurate,0.0003432786529202832,1.8520869844851217e-05
+secondary,"C3: symmetric vs GBM, $h=1$",Stocks,SetGRU,GBM,-0.017391932404869,0.0028713513123822,0.0028713513123822,more accurate,1.0,0.019909841647178458
+secondary,"C3: symmetric vs GBM, $h=1$",Stocks,EQCov,GBM,-0.0187246871473914,0.0001399842223133,0.0002799684446267,more accurate,0.0956092238399839,0.0019412906301938774
+secondary,"C3: symmetric vs GBM, $h=5$",ETF,DeepSets,GBM,-0.0048215822391347,0.722546599227591,1.0,indistinguishable,1.0,0.7926444036302677
+secondary,"C3: symmetric vs GBM, $h=5$",ETF,PENet,GBM,-0.0086811376588811,0.5280666521677914,1.0,indistinguishable,1.0,0.633163114752572
+secondary,"C3: symmetric vs GBM, $h=5$",ETF,SetTransformer,GBM,-0.0061019148728046,0.638094086088715,1.0,indistinguishable,1.0,0.7260048812309683
+secondary,"C3: symmetric vs GBM, $h=5$",ETF,SetGRU,GBM,-0.0053724452576243,0.5992481436645816,1.0,indistinguishable,1.0,0.6925273358387853
+secondary,"C3: symmetric vs GBM, $h=5$",ETF,EQCov,GBM,-0.0173780062542007,0.1464068599904916,0.7320342999524581,indistinguishable,1.0,0.3067202924190193
+secondary,"C3: symmetric vs GBM, $h=5$",Stocks,DeepSets,GBM,-0.0126957923227352,0.0642895352644361,0.2571581410577447,indistinguishable,1.0,0.1905355178200022
+secondary,"C3: symmetric vs GBM, $h=5$",Stocks,PENet,GBM,-0.0135959724689166,0.0686819165419069,0.2571581410577447,indistinguishable,1.0,0.19796552415020224
+secondary,"C3: symmetric vs GBM, $h=5$",Stocks,SetTransformer,GBM,-0.0147263295737803,0.046772562365648,0.2338628118282404,indistinguishable,1.0,0.1584231951094529
+secondary,"C3: symmetric vs GBM, $h=5$",Stocks,SetGRU,GBM,-0.0055832463584571,0.4644952653425285,0.4644952653425285,indistinguishable,1.0,0.5820858195815954
+secondary,"C3: symmetric vs GBM, $h=5$",Stocks,EQCov,GBM,-0.0116811980460085,0.1157897160279434,0.2571581410577447,indistinguishable,1.0,0.26820096191074505
+secondary,"C3: symmetric vs GBM, $h=22$",ETF,DeepSets,GBM,-0.0274790538979728,0.4043044924053922,1.0,indistinguishable,1.0,0.5306496462820772
+secondary,"C3: symmetric vs GBM, $h=22$",ETF,PENet,GBM,-0.0057119103919751,0.7624829216043756,1.0,indistinguishable,1.0,0.8192168040957938
+secondary,"C3: symmetric vs GBM, $h=22$",ETF,SetTransformer,GBM,-0.0012846817144557,0.9214636279971976,1.0,indistinguishable,1.0,0.9367576301216324
+secondary,"C3: symmetric vs GBM, $h=22$",ETF,SetGRU,GBM,0.0206147898116922,0.2009782430301379,1.0,indistinguishable,1.0,0.37397217373962366
+secondary,"C3: symmetric vs GBM, $h=22$",ETF,EQCov,GBM,-0.0027639156575969,0.8695811087879788,1.0,indistinguishable,1.0,0.9027431002248084
+secondary,"C3: symmetric vs GBM, $h=22$",Stocks,DeepSets,GBM,-0.0331038720364626,0.2090356809709237,0.5059178291770556,indistinguishable,1.0,0.38001749713049554
+secondary,"C3: symmetric vs GBM, $h=22$",Stocks,PENet,GBM,-0.0266661009473158,0.0560383143809018,0.2801915719045091,indistinguishable,1.0,0.18040804400709518
+secondary,"C3: symmetric vs GBM, $h=22$",Stocks,SetTransformer,GBM,-0.0387660980502267,0.1824410260251863,0.5059178291770556,indistinguishable,1.0,0.3528793529697683
+secondary,"C3: symmetric vs GBM, $h=22$",Stocks,SetGRU,GBM,-0.0481884357615241,0.1636402840627584,0.5059178291770556,indistinguishable,1.0,0.33225306294510343
+secondary,"C3: symmetric vs GBM, $h=22$",Stocks,EQCov,GBM,-0.0431212850020195,0.1264794572942639,0.5059178291770556,indistinguishable,1.0,0.2801788261665738
+robustness checks,"K3a, $h=1$, in-range",ETF,DeepSets-wide,MLP-wide,-0.0042350453665264,0.2155199623875967,0.4310399247751935,indistinguishable,1.0,0.38355247543555343
+robustness checks,"K3a, $h=1$, in-range",ETF,PENet-wide,MLP-wide,-0.0075030290528177,0.0487345034141901,0.1462035102425704,indistinguishable,1.0,0.16356100460926815
+robustness checks,"K3a, $h=1$, in-range",ETF,SetTransformer-wide,MLP-wide,-0.0011071346288835,0.7646023504894075,0.7646023504894075,indistinguishable,1.0,0.8192168040957938
+robustness checks,"K3a, $h=1$, in-range",ETF,SetGRU-wide,GRU-wide,-0.0109934411321969,0.0274365347206883,0.1097461388827533,indistinguishable,1.0,0.10671317842413472
+robustness checks,"K3a, $h=1$, in-range",ETF,EQCov-wide,MLP-wide,-0.0071659499180794,0.0097043925206647,0.0485219626033235,more accurate,1.0,0.050915841547099314
+robustness checks,"K3b, $h=1$, in-range",ETF,MLP-wide,Linear-wide,0.0063490064953964,0.0360594506780703,0.2524161547464923,indistinguishable,1.0,0.12979961009001034
+robustness checks,"K3b, $h=1$, in-range",ETF,GRU-wide,Linear-wide,0.0101476368745655,0.1237842773403754,0.7427056640422525,indistinguishable,1.0,0.27908418357415926
+robustness checks,"K3b, $h=1$, in-range",ETF,DeepSets-wide,Linear-wide,0.0021139611288699,0.6099692524993876,1.0,indistinguishable,1.0,0.7027075244311127
+robustness checks,"K3b, $h=1$, in-range",ETF,PENet-wide,Linear-wide,-0.0011540225574212,0.7373611347926718,1.0,indistinguishable,1.0,0.8016657254017356
+robustness checks,"K3b, $h=1$, in-range",ETF,SetTransformer-wide,Linear-wide,0.0052418718665128,0.1681114300304663,0.8405571501523317,indistinguishable,1.0,0.3357660355228063
+robustness checks,"K3b, $h=1$, in-range",ETF,SetGRU-wide,Linear-wide,-0.0008458042576313,0.8813720009648967,1.0,indistinguishable,1.0,0.9085672099708261
+robustness checks,"K3b, $h=1$, in-range",ETF,EQCov-wide,Linear-wide,-0.0008169434226829,0.7763138904985034,1.0,indistinguishable,1.0,0.8293469615063954
+robustness checks,"K3c, $h=1$, in-range",ETF,DeepSets-wide,HEAVY,-0.0074505154185963,0.280501537728747,0.561003075457494,indistinguishable,1.0,0.4260832826902366
+robustness checks,"K3c, $h=1$, in-range",ETF,PENet-wide,HEAVY,-0.0107184991048875,0.0494258689956327,0.2471293449781636,indistinguishable,1.0,0.16512733505359106
+robustness checks,"K3c, $h=1$, in-range",ETF,SetTransformer-wide,HEAVY,-0.0043226046809533,0.4648767021692469,0.561003075457494,indistinguishable,1.0,0.5820858195815954
+robustness checks,"K3c, $h=1$, in-range",ETF,SetGRU-wide,HEAVY,-0.0104102808050976,0.0941001506612505,0.3317955983004287,indistinguishable,1.0,0.23659603181095723
+robustness checks,"K3c, $h=1$, in-range",ETF,EQCov-wide,HEAVY,-0.0103814199701492,0.0829488995751071,0.3317955983004287,indistinguishable,1.0,0.22497210770370374
+robustness checks,"K14a, $h=1$, in-range",ETF,DeepSets-wideh,MLP-wideh,-0.0058487744054907,0.0249957206747597,0.0999828826990388,indistinguishable,1.0,0.10221283245301369
+robustness checks,"K14a, $h=1$, in-range",ETF,PENet-wideh,MLP-wideh,-0.0021583267014331,0.4677099377800686,0.6134036357706512,indistinguishable,1.0,0.5842961091660561
+robustness checks,"K14a, $h=1$, in-range",ETF,SetTransformer-wideh,MLP-wideh,0.0030343675767244,0.3067018178853256,0.6134036357706512,indistinguishable,1.0,0.44258992079977344
+robustness checks,"K14a, $h=1$, in-range",ETF,SetGRU-wideh,GRU-wideh,-0.0086669095310774,0.0033864946758457,0.0169324733792287,more accurate,1.0,0.022719401874273588
+robustness checks,"K14a, $h=1$, in-range",ETF,EQCov-wideh,MLP-wideh,-0.0053054371856477,0.1189616947325982,0.3568850841977948,indistinguishable,1.0,0.27027373759104745
+robustness checks,"K14b, $h=1$, in-range",ETF,MLP-wideh,Linear-wideh,0.004443111056229,0.0540603779664317,0.3243622677985903,indistinguishable,1.0,0.176134584455523
+robustness checks,"K14b, $h=1$, in-range",ETF,GRU-wideh,Linear-wideh,0.0045812281706826,0.3719908266575752,1.0,indistinguishable,1.0,0.502659120419373
+robustness checks,"K14b, $h=1$, in-range",ETF,DeepSets-wideh,Linear-wideh,-0.0014056633492616,0.6192896629914713,1.0,indistinguishable,1.0,0.710616963560125
+robustness checks,"K14b, $h=1$, in-range",ETF,PENet-wideh,Linear-wideh,0.0022847843547959,0.4090552919427467,1.0,indistinguishable,1.0,0.5349744476475423
+robustness checks,"K14b, $h=1$, in-range",ETF,SetTransformer-wideh,Linear-wideh,0.0074774786329534,0.0310044201000278,0.2170309407001948,indistinguishable,1.0,0.11567638971330169
+robustness checks,"K14b, $h=1$, in-range",ETF,SetGRU-wideh,Linear-wideh,-0.0040856813603948,0.3716306426350138,1.0,indistinguishable,1.0,0.502659120419373
+robustness checks,"K14b, $h=1$, in-range",ETF,EQCov-wideh,Linear-wideh,-0.0008623261294186,0.8085927417668926,1.0,indistinguishable,1.0,0.8563626299692594
+robustness checks,"K14c, $h=1$, in-range",ETF,DeepSets-wideh,HEAVY,-0.0109701398967279,0.0649588325234564,0.2598353300938256,indistinguishable,1.0,0.19174595142466044
+robustness checks,"K14c, $h=1$, in-range",ETF,PENet-wideh,HEAVY,-0.0072796921926703,0.2114655188113914,0.4229310376227828,indistinguishable,1.0,0.38001749713049554
+robustness checks,"K14c, $h=1$, in-range",ETF,SetTransformer-wideh,HEAVY,-0.0020869979145127,0.7344982339399873,0.7344982339399873,indistinguishable,1.0,0.8009735933915292
+robustness checks,"K14c, $h=1$, in-range",ETF,SetGRU-wideh,HEAVY,-0.0136501579078611,0.0164578227919867,0.0822891139599336,indistinguishable,1.0,0.07466975155623595
+robustness checks,"K14c, $h=1$, in-range",ETF,EQCov-wideh,HEAVY,-0.0104268026768849,0.0918465279698946,0.2755395839096839,indistinguishable,1.0,0.23659603181095723
+robustness checks,"K3a, $h=5$, in-range",ETF,DeepSets-wide,MLP-wide,-0.0011411384070254,0.8879655918066307,1.0,indistinguishable,1.0,0.9139383125640596
+robustness checks,"K3a, $h=5$, in-range",ETF,PENet-wide,MLP-wide,0.0159136288396872,0.4933959357519444,1.0,indistinguishable,1.0,0.6014030062648078
+robustness checks,"K3a, $h=5$, in-range",ETF,SetTransformer-wide,MLP-wide,0.0147402669517146,0.3740728483176214,1.0,indistinguishable,1.0,0.5040640460048839
+robustness checks,"K3a, $h=5$, in-range",ETF,SetGRU-wide,GRU-wide,0.0078147910728466,0.634331414234039,1.0,indistinguishable,1.0,0.7228427743597189
+robustness checks,"K3a, $h=5$, in-range",ETF,EQCov-wide,MLP-wide,-0.001598162770075,0.5632175547061475,1.0,indistinguishable,1.0,0.6612857870751093
+robustness checks,"K3b, $h=5$, in-range",ETF,MLP-wide,Linear-wide,0.002053123779777,0.4891806896225422,1.0,indistinguishable,1.0,0.5992463447876142
+robustness checks,"K3b, $h=5$, in-range",ETF,GRU-wide,Linear-wide,0.0090764504186589,0.1191410761625842,0.8339875331380895,indistinguishable,1.0,0.27027373759104745
+robustness checks,"K3b, $h=5$, in-range",ETF,DeepSets-wide,Linear-wide,0.0009119853727515,0.9002999362024178,1.0,indistinguishable,1.0,0.9229016082409722
+robustness checks,"K3b, $h=5$, in-range",ETF,PENet-wide,Linear-wide,0.0179667526194642,0.4149786456557925,1.0,indistinguishable,1.0,0.5373773201516572
+robustness checks,"K3b, $h=5$, in-range",ETF,SetTransformer-wide,Linear-wide,0.0167933907314916,0.2765700429106804,1.0,indistinguishable,1.0,0.4252698358563809
+robustness checks,"K3b, $h=5$, in-range",ETF,SetGRU-wide,Linear-wide,0.0168912414915055,0.3248318424132035,1.0,indistinguishable,1.0,0.4591373157186626
+robustness checks,"K3b, $h=5$, in-range",ETF,EQCov-wide,Linear-wide,0.0004549610097019,0.8805956351007074,1.0,indistinguishable,1.0,0.9085672099708261
+robustness checks,"K3c, $h=5$, in-range",ETF,DeepSets-wide,HEAVY,0.0056486013487567,0.5491717922808753,1.0,indistinguishable,1.0,0.6520860538391654
+robustness checks,"K3c, $h=5$, in-range",ETF,PENet-wide,HEAVY,0.0227033685954694,0.3343971968403786,1.0,indistinguishable,1.0,0.4685874099432799
+robustness checks,"K3c, $h=5$, in-range",ETF,SetTransformer-wide,HEAVY,0.0215300067074967,0.2259997346537615,1.0,indistinguishable,1.0,0.3908465999306228
+robustness checks,"K3c, $h=5$, in-range",ETF,SetGRU-wide,HEAVY,0.0216278574675106,0.277158460402885,1.0,indistinguishable,1.0,0.42528490270588826
+robustness checks,"K3c, $h=5$, in-range",ETF,EQCov-wide,HEAVY,0.0051915769857071,0.4474517412670772,1.0,indistinguishable,1.0,0.5650808072702779
+robustness checks,"K4a, $h=5$, main design",ETF,MLP-idsort,MLP,-0.0028064877063677,0.5877128487784725,1.0,indistinguishable,1.0,0.6824669423307012
+robustness checks,"K4a, $h=5$, raw inputs",ETF,MLP-idsort-RAW,MLP-RAW,0.0051410142654931,0.1742887506379968,0.5228662519139905,indistinguishable,1.0,0.3433367010368662
+robustness checks,"K4a, $h=5$, pool 50",ETF,MLP-idsort-P50,MLP-P50,0.0024430652898825,0.5667133545496801,1.0,indistinguishable,1.0,0.6643290519840748
+robustness checks,"K4b, $h=5$, main design",ETF,MLP-sorted,MLP-idsort,0.0018424159618392,0.6957095739136415,0.6957095739136415,indistinguishable,1.0,0.7689421606413933
+robustness checks,"K4b, $h=5$, raw inputs",ETF,MLP-sorted-RAW,MLP-idsort-RAW,-0.0261021374681021,1.481593675760906e-20,4.4447810272827184e-20,more accurate,1.0845265706569833e-17,2.722428379210665e-18
+robustness checks,"K4b, $h=5$, pool 50",ETF,MLP-sorted-P50,MLP-idsort-P50,-0.0120148740697216,0.0181349558062294,0.0362699116124589,more accurate,1.0,0.08029634046734102
+robustness checks,"K3a, $h=22$, in-range",ETF,DeepSets-wide,MLP-wide,0.1107498667311577,0.2603472229901329,1.0,indistinguishable,1.0,0.41655731679721364
+robustness checks,"K3a, $h=22$, in-range",ETF,PENet-wide,MLP-wide,0.0851566779944349,0.2904993616206613,1.0,indistinguishable,1.0,0.4330974255399312
+robustness checks,"K3a, $h=22$, in-range",ETF,SetTransformer-wide,MLP-wide,0.0872935841486997,0.2942150512017465,1.0,indistinguishable,1.0,0.4349738929030714
+robustness checks,"K3a, $h=22$, in-range",ETF,SetGRU-wide,GRU-wide,0.0749518325957697,0.3021855298612462,1.0,indistinguishable,1.0,0.4387324527998246
+robustness checks,"K3a, $h=22$, in-range",ETF,EQCov-wide,MLP-wide,0.0113020173747288,0.5566725317859416,1.0,indistinguishable,1.0,0.6558378677003045
+robustness checks,"K3b, $h=22$, in-range",ETF,MLP-wide,Linear-wide,0.0375947899063052,0.0908437391145087,0.5450624346870527,indistinguishable,1.0,0.23659603181095723
+robustness checks,"K3b, $h=22$, in-range",ETF,GRU-wide,Linear-wide,0.0340107433823163,0.0770928530112911,0.5396499710790381,indistinguishable,1.0,0.21382357344641115
+robustness checks,"K3b, $h=22$, in-range",ETF,DeepSets-wide,Linear-wide,0.1483446566374629,0.2026934167645798,0.8107736670583192,indistinguishable,1.0,0.376211265964561
+robustness checks,"K3b, $h=22$, in-range",ETF,PENet-wide,Linear-wide,0.1227514679007401,0.2110523071324551,0.8107736670583192,indistinguishable,1.0,0.38001749713049554
+robustness checks,"K3b, $h=22$, in-range",ETF,SetTransformer-wide,Linear-wide,0.1248883740550049,0.2191369093213313,0.8107736670583192,indistinguishable,1.0,0.38709570787242265
+robustness checks,"K3b, $h=22$, in-range",ETF,SetGRU-wide,Linear-wide,0.108962575978086,0.2200112190249484,0.8107736670583192,indistinguishable,1.0,0.38709570787242265
+robustness checks,"K3b, $h=22$, in-range",ETF,EQCov-wide,Linear-wide,0.048896807281034,0.1545037017044762,0.7725185085223812,indistinguishable,1.0,0.3180958564503922
+robustness checks,"K3c, $h=22$, in-range",ETF,DeepSets-wide,HAR,0.1911073170064552,0.2618237873360275,1.0,indistinguishable,1.0,0.41655731679721364
+robustness checks,"K3c, $h=22$, in-range",ETF,PENet-wide,HAR,0.1655141282697324,0.2789245615870504,1.0,indistinguishable,1.0,0.4260832826902366
+robustness checks,"K3c, $h=22$, in-range",ETF,SetTransformer-wide,HAR,0.1676510344239972,0.2783398695620647,1.0,indistinguishable,1.0,0.4260832826902366
+robustness checks,"K3c, $h=22$, in-range",ETF,SetGRU-wide,HAR,0.1517252363470782,0.3000065730468982,1.0,indistinguishable,1.0,0.43750958569339327
+robustness checks,"K3c, $h=22$, in-range",ETF,EQCov-wide,HAR,0.0916594676500263,0.3190454298626352,1.0,indistinguishable,1.0,0.4562225504845075
+robustness checks,"K14a, $h=22$, in-range",ETF,DeepSets-wideh,MLP-wideh,0.0908249050308083,0.1869681852414974,0.5609045557244923,indistinguishable,1.0,0.35693926273376775
+robustness checks,"K14a, $h=22$, in-range",ETF,PENet-wideh,MLP-wideh,0.0225984285416398,0.0041999651626314,0.0209998258131573,less accurate,1.0,0.02661184822874206
+robustness checks,"K14a, $h=22$, in-range",ETF,SetTransformer-wideh,MLP-wideh,0.0519861812222114,0.1110453022473353,0.4441812089893412,indistinguishable,1.0,0.2638961556606243
+robustness checks,"K14a, $h=22$, in-range",ETF,SetGRU-wideh,GRU-wideh,-0.0107701793017829,0.5730980629281295,0.9826008854077396,indistinguishable,1.0,0.6686144067494844
+robustness checks,"K14a, $h=22$, in-range",ETF,EQCov-wideh,MLP-wideh,0.0067287650439474,0.4913004427038697,0.9826008854077396,indistinguishable,1.0,0.5998435637663525
+robustness checks,"K14b, $h=22$, in-range",ETF,MLP-wideh,Linear-wideh,0.0397444427008216,0.3542599575109055,1.0,indistinguishable,1.0,0.4881328920961488
+robustness checks,"K14b, $h=22$, in-range",ETF,GRU-wideh,Linear-wideh,0.0889941088625587,0.232048430297052,1.0,indistinguishable,1.0,0.3958736882508365
+robustness checks,"K14b, $h=22$, in-range",ETF,DeepSets-wideh,Linear-wideh,0.1305693477316299,0.2390176543051637,1.0,indistinguishable,1.0,0.39992484316468685
+robustness checks,"K14b, $h=22$, in-range",ETF,PENet-wideh,Linear-wideh,0.0623428712424614,0.1841108597710555,1.0,indistinguishable,1.0,0.3536928533226686
+robustness checks,"K14b, $h=22$, in-range",ETF,SetTransformer-wideh,Linear-wideh,0.091730623923033,0.2105900839254527,1.0,indistinguishable,1.0,0.38001749713049554
+robustness checks,"K14b, $h=22$, in-range",ETF,SetGRU-wideh,Linear-wideh,0.0782239295607757,0.1838685885675361,1.0,indistinguishable,1.0,0.3536928533226686
+robustness checks,"K14b, $h=22$, in-range",ETF,EQCov-wideh,Linear-wideh,0.0464732077447691,0.2151455830042409,1.0,indistinguishable,1.0,0.38355247543555343
+robustness checks,"K14c, $h=22$, in-range",ETF,DeepSets-wideh,HAR,0.1811807472802839,0.264184172920212,1.0,indistinguishable,1.0,0.41668533711664346
+robustness checks,"K14c, $h=22$, in-range",ETF,PENet-wideh,HAR,0.1129542707911154,0.2705577443270643,1.0,indistinguishable,1.0,0.42364652891239507
+robustness checks,"K14c, $h=22$, in-range",ETF,SetTransformer-wideh,HAR,0.142342023471687,0.2536830149481644,1.0,indistinguishable,1.0,0.4125155220949134
+robustness checks,"K14c, $h=22$, in-range",ETF,SetGRU-wideh,HAR,0.1288353291094297,0.2587645875367365,1.0,indistinguishable,1.0,0.416174993084248
+robustness checks,"K14c, $h=22$, in-range",ETF,EQCov-wideh,HAR,0.097084607293423,0.2985249352925073,1.0,indistinguishable,1.0,0.43708332159361124
+robustness checks,"K6, $h=1$, in-range",ETF,Linear-noasset,Linear,0.0545800321251229,4.945039283819221e-05,0.0002472519641909,less accurate,0.03446692380821997,0.0009319497111813146
+robustness checks,"K6, $h=1$, in-range",ETF,Linear-noeuler,Linear,0.0058644028962912,0.0069217831045202,0.0138435662090405,less accurate,1.0,0.039746176420487084
+robustness checks,"K6, $h=1$, in-range",ETF,Linear-nopairs,Linear,0.0001672386611402,0.1419046318738651,0.1419046318738651,indistinguishable,1.0,0.30231856355736475
+robustness checks,"K6, $h=1$, in-range",ETF,Linear-noport,Linear,0.0052991859538169,0.0022367645795678,0.0067102937387035,less accurate,1.0,0.01660628248467003
+robustness checks,"K6, $h=1$, in-range",ETF,Linear-portonly,Linear,0.0645138412735242,0.0001312683993186,0.0005250735972745,less accurate,0.0897875851339224,0.0018554283365225194
+robustness checks,"K7, $h=1$, in-range",ETF,DeepSets,MLP-small,-0.0134833905699236,0.0006300913946471,0.0012601827892943,more accurate,0.4146001376777918,0.005937399680328442
+robustness checks,"K7, $h=1$, in-range",ETF,DeepSets-L,MLP,-0.0068038796624261,0.0092782646377366,0.0092782646377366,more accurate,1.0,0.049416844266205795
+robustness checks,"K6, $h=5$, in-range",ETF,Linear-noasset,Linear,0.0440148642854678,0.0056013330788987,0.0280066653944935,less accurate,1.0,0.03267444296024242
+robustness checks,"K6, $h=5$, in-range",ETF,Linear-noeuler,Linear,0.005093445829361,0.0625464841621786,0.1876394524865359,indistinguishable,1.0,0.1868862935150521
+robustness checks,"K6, $h=5$, in-range",ETF,Linear-nopairs,Linear,0.0004202349279581,0.1105852160261714,0.2211704320523428,indistinguishable,1.0,0.2638961556606243
+robustness checks,"K6, $h=5$, in-range",ETF,Linear-noport,Linear,0.0034567639891586,0.1250389893180299,0.2211704320523428,indistinguishable,1.0,0.2801788261665738
+robustness checks,"K6, $h=5$, in-range",ETF,Linear-portonly,Linear,0.0529277181941516,0.0120881012703191,0.0483524050812767,less accurate,1.0,0.05962922438714456
+robustness checks,"K7, $h=5$, in-range",ETF,DeepSets,MLP-small,-0.0029690889657093,0.3523216019821181,0.3523216019821181,indistinguishable,1.0,0.4867601080016105
+robustness checks,"K7, $h=5$, in-range",ETF,DeepSets-L,MLP,-0.0064914705293099,0.0267649240504418,0.0535298481008837,indistinguishable,1.0,0.10576461923158453
+robustness checks,"K6, $h=22$, in-range",ETF,Linear-noasset,Linear,0.0851559678470737,0.1466247098259766,0.5864988393039064,indistinguishable,1.0,0.3067202924190193
+robustness checks,"K6, $h=22$, in-range",ETF,Linear-noeuler,Linear,0.0863231419036777,0.1656389137707863,0.5864988393039064,indistinguishable,1.0,0.33354685375761073
+robustness checks,"K6, $h=22$, in-range",ETF,Linear-nopairs,Linear,0.0015237424181531,0.1651151233654308,0.5864988393039064,indistinguishable,1.0,0.33340553756481217
+robustness checks,"K6, $h=22$, in-range",ETF,Linear-noport,Linear,0.0052605409906075,0.0486131624418683,0.2430658122093415,indistinguishable,1.0,0.16356100460926815
+robustness checks,"K6, $h=22$, in-range",ETF,Linear-portonly,Linear,0.0909441089182671,0.1818338676216357,0.5864988393039064,indistinguishable,1.0,0.35263296227414836
+robustness checks,"K7, $h=22$, in-range",ETF,DeepSets,MLP-small,-0.0698921755575352,0.1261056290858038,0.2522112581716077,indistinguishable,1.0,0.2801788261665738
+robustness checks,"K7, $h=22$, in-range",ETF,DeepSets-L,MLP,0.0339044204427509,0.2899099813318251,0.2899099813318251,indistinguishable,1.0,0.4330974255399312
+robustness checks,"K5a, $h=1$, in-range",ETF,MLP-tsort,MLP-sorted,-0.0013045269373854,0.089894353561876,0.2400250358900547,indistinguishable,1.0,0.23513291767964006
+robustness checks,"K5a, $h=5$, in-range",ETF,MLP-tsort,MLP-sorted,-0.0012918050033039,0.0800083452966849,0.2400250358900547,indistinguishable,1.0,0.21989841507540378
+robustness checks,"K5a, $h=22$, in-range",ETF,MLP-tsort,MLP-sorted,-0.0003566113920095,0.5546669783151017,0.5546669783151017,indistinguishable,1.0,0.6554344518675237
+robustness checks,"K5b, $h=1$, in-range",ETF,MLP-tsort,MLP,-0.0015264030726988,0.2930681258537195,0.5861362517074391,indistinguishable,1.0,0.43487872874840044
+robustness checks,"K5b, $h=5$, in-range",ETF,MLP-tsort,MLP,-0.0022558767478324,0.0410493479235229,0.1231480437705687,indistinguishable,1.0,0.14299180437814848
+robustness checks,"K5b, $h=22$, in-range",ETF,MLP-tsort,MLP,0.0047937753707693,0.4312831073417215,0.5861362517074391,indistinguishable,1.0,0.5512923198194178
+robustness checks,"K10a, $h=5$, in-range, raw inputs",ETF,DeepSets-RAW,MLP-sorted-RAW-d3,0.0023113476621639,0.6592872461232981,1.0,indistinguishable,1.0,0.7421809603978732
+robustness checks,"K10a, $h=5$, in-range, raw inputs",ETF,PENet-RAW,MLP-sorted-RAW-d3,-0.0063985158327197,0.0630321625947811,0.1890964877843434,indistinguishable,1.0,0.18756534213426765
+robustness checks,"K10a, $h=5$, in-range, raw inputs",ETF,SetTransformer-RAW,MLP-sorted-RAW-d3,0.002157822149452,0.6015977713845242,1.0,indistinguishable,1.0,0.6941512746744509
+robustness checks,"K10a, $h=5$, in-range, pool 50",ETF,DeepSets-P50,MLP-sorted-P50-d3,0.003658938470351,0.7168366112600806,0.9701948655951892,indistinguishable,1.0,0.788726609557753
+robustness checks,"K10a, $h=5$, in-range, pool 50",ETF,PENet-P50,MLP-sorted-P50-d3,-0.0085397063677049,0.0676360617400958,0.2029081852202874,indistinguishable,1.0,0.1972191132502157
+robustness checks,"K10a, $h=5$, in-range, pool 50",ETF,SetTransformer-P50,MLP-sorted-P50-d3,0.0084429844486887,0.4850974327975945,0.9701948655951892,indistinguishable,1.0,0.5972305077156315
+robustness checks,"K10a, $h=5$, in-range, pool 50",ETF,EQCov-P50,MLP-sorted-P50-d3,-0.0100285654238569,0.0036146312837988,0.0144585251351955,more accurate,1.0,0.023721017799929627
+robustness checks,"K10a, $h=5$, in-range, pool 500",ETF,DeepSets-P500,MLP-sorted-P500-d3,0.0102752571857568,0.149350290170586,0.4574001308815026,indistinguishable,1.0,0.31045055940389515
+robustness checks,"K10a, $h=5$, in-range, pool 500",ETF,PENet-P500,MLP-sorted-P500-d3,0.000867220336236,0.774211467917962,0.774211467917962,indistinguishable,1.0,0.828304845589086
+robustness checks,"K10a, $h=5$, in-range, pool 500",ETF,SetTransformer-P500,MLP-sorted-P500-d3,0.0170886734378977,0.1143500327203756,0.4574001308815026,indistinguishable,1.0,0.267613603704828
+robustness checks,"K10a, $h=5$, in-range, pool 500",ETF,EQCov-P500,MLP-sorted-P500-d3,-0.0033692691280294,0.1889326361171396,0.4574001308815026,indistinguishable,1.0,0.3580459280592541
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",ETF,MLP-sorted-RAW-d3,MLP-RAW,-0.0200188053817212,4.706796824355609e-07,1.4120390473066828e-06,more accurate,0.00033794801198873273,1.8520869844851217e-05
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",ETF,MLP-sorted-P50-d3,MLP-P50,-0.0122304504955914,9.489462137175113e-09,3.795784854870045e-08,more accurate,6.8513916630404315e-06,4.981967622016934e-07
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",ETF,MLP-sorted-P500-d3,MLP-P500,-0.0028528648913237,0.0319518859802985,0.0639037719605971,indistinguishable,1.0,0.11689380792132958
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",ETF,MLP-sorted-d3,MLP,-0.0002681538277471,0.692145769471882,0.692145769471882,indistinguishable,1.0,0.7673109209077424
+robustness checks,"K15a, $h=1$, in-range",ETF,DeepSets,VolCorr-asset,-0.0072796535150507,0.0588989151064102,0.2330739686439278,indistinguishable,1.0,0.18189370841685504
+robustness checks,"K15a, $h=1$, in-range",ETF,PENet,VolCorr-asset,-0.0077351258753485,0.1182752769719898,0.2330739686439278,indistinguishable,1.0,0.2699761756969333
+robustness checks,"K15a, $h=1$, in-range",ETF,SetTransformer,VolCorr-asset,-0.0096986248343084,0.0582684921609819,0.2330739686439278,indistinguishable,1.0,0.18149196526743153
+robustness checks,"K15a, $h=1$, in-range",ETF,SetGRU,VolCorr-asset,-0.0173970756608486,0.0098620902747215,0.0493104513736077,more accurate,1.0,0.05104673487267818
+robustness checks,"K15a, $h=1$, in-range",ETF,EQCov,VolCorr-asset,-0.0106855257211854,0.0672253720665608,0.2330739686439278,indistinguishable,1.0,0.19685517318295692
+robustness checks,"K15b, $h=1$, in-range",ETF,Linear,VolCorr-asset,-0.0010953355483629,0.7473469725766756,0.7473469725766756,indistinguishable,1.0,0.8089838362943396
+robustness checks,"K15c, $h=1$, in-range",ETF,VolCorr,VolCorr-asset,-0.0003810619978845,0.8662995668251243,0.8662995668251243,indistinguishable,1.0,0.9006084605607727
+robustness checks,"K15a, $h=5$, in-range",ETF,DeepSets,VolCorr-asset,0.0015655365096424,0.7244993518632973,1.0,indistinguishable,1.0,0.7936021216386341
+robustness checks,"K15a, $h=5$, in-range",ETF,PENet,VolCorr-asset,-0.002294018910104,0.6809686431006544,1.0,indistinguishable,1.0,0.7563902597508348
+robustness checks,"K15a, $h=5$, in-range",ETF,SetTransformer,VolCorr-asset,0.0002852038759725,0.9510524099352196,1.0,indistinguishable,1.0,0.961517911007409
+robustness checks,"K15a, $h=5$, in-range",ETF,SetGRU,VolCorr-asset,0.0010146734911528,0.8529342261448849,1.0,indistinguishable,1.0,0.8904924093984239
+robustness checks,"K15a, $h=5$, in-range",ETF,EQCov,VolCorr-asset,-0.0109908875054236,0.1112433682407854,0.5562168412039272,indistinguishable,1.0,0.2638961556606243
+robustness checks,"K15b, $h=5$, in-range",ETF,Linear,VolCorr-asset,0.0009584130955753,0.8145421466017618,0.8145421466017618,indistinguishable,1.0,0.8607374544365723
+robustness checks,"K15c, $h=5$, in-range",ETF,VolCorr,VolCorr-asset,0.0070676178374986,0.0595975321240267,0.0595975321240267,indistinguishable,1.0,0.18251744212983176
+robustness checks,"K15a, $h=22$, in-range",ETF,DeepSets,VolCorr-asset,-0.0429862034737333,0.1567897035217358,0.783948517608679,indistinguishable,1.0,0.32100398910438943
+robustness checks,"K15a, $h=22$, in-range",ETF,PENet,VolCorr-asset,-0.0212190599677356,0.19387887500682,0.783948517608679,indistinguishable,1.0,0.36445261670079976
+robustness checks,"K15a, $h=22$, in-range",ETF,SetTransformer,VolCorr-asset,-0.0167918312902162,0.1713933370733988,0.783948517608679,indistinguishable,1.0,0.3397354899246446
+robustness checks,"K15a, $h=22$, in-range",ETF,SetGRU,VolCorr-asset,0.0051076402359317,0.7272516273469922,0.783948517608679,indistinguishable,1.0,0.7954314674107728
+robustness checks,"K15a, $h=22$, in-range",ETF,EQCov,VolCorr-asset,-0.0182710652333574,0.2111660932221621,0.783948517608679,indistinguishable,1.0,0.38001749713049554
+robustness checks,"K15b, $h=22$, in-range",ETF,Linear,VolCorr-asset,-0.0786227788684398,0.1867347370775565,0.1867347370775565,indistinguishable,1.0,0.35693926273376775
+robustness checks,"K15c, $h=22$, in-range",ETF,VolCorr,VolCorr-asset,-0.0587005820372336,0.2452586560103943,0.2452586560103943,indistinguishable,1.0,0.4052753200882084
+robustness checks,"K3a, $h=1$, in-range",Stocks,DeepSets-wide,MLP-wide,-0.0043093070179864,0.2733333944632856,0.7351485537442379,indistinguishable,1.0,0.42364652891239507
+robustness checks,"K3a, $h=1$, in-range",Stocks,PENet-wide,MLP-wide,-0.0004059025981361,0.9441926179599882,0.9441926179599882,indistinguishable,1.0,0.9558974851247815
+robustness checks,"K3a, $h=1$, in-range",Stocks,SetTransformer-wide,MLP-wide,-0.0059525094022742,0.0740156697599136,0.3700783487995679,indistinguishable,1.0,0.2084349320825153
+robustness checks,"K3a, $h=1$, in-range",Stocks,SetGRU-wide,GRU-wide,-0.0044387669340628,0.2450495179147459,0.7351485537442379,indistinguishable,1.0,0.4052753200882084
+robustness checks,"K3a, $h=1$, in-range",Stocks,EQCov-wide,MLP-wide,-0.0034391034009893,0.1714855330095825,0.6859421320383303,indistinguishable,1.0,0.3397354899246446
+robustness checks,"K3b, $h=1$, in-range",Stocks,MLP-wide,Linear-wide,0.0103549031356563,0.0027666548977064,0.0193665842839454,less accurate,1.0,0.019742634464215574
+robustness checks,"K3b, $h=1$, in-range",Stocks,GRU-wide,Linear-wide,0.0150392644507614,0.0242812563054967,0.1456875378329807,indistinguishable,1.0,0.10082894567536764
+robustness checks,"K3b, $h=1$, in-range",Stocks,DeepSets-wide,Linear-wide,0.0060455961176699,0.2968757077903055,0.6636261875313346,indistinguishable,1.0,0.4355362180157176
+robustness checks,"K3b, $h=1$, in-range",Stocks,PENet-wide,Linear-wide,0.0099490005375201,0.2212087291771115,0.6636261875313346,indistinguishable,1.0,0.38709570787242265
+robustness checks,"K3b, $h=1$, in-range",Stocks,SetTransformer-wide,Linear-wide,0.004402393733382,0.416010469614004,0.6636261875313346,indistinguishable,1.0,0.5373773201516572
+robustness checks,"K3b, $h=1$, in-range",Stocks,SetGRU-wide,Linear-wide,0.0106004975166986,0.0843423473711761,0.4217117368558809,indistinguishable,1.0,0.22707555061470489
+robustness checks,"K3b, $h=1$, in-range",Stocks,EQCov-wide,Linear-wide,0.0069157997346669,0.0896253768716533,0.4217117368558809,indistinguishable,1.0,0.23513291767964006
+robustness checks,"K3c, $h=1$, in-range",Stocks,DeepSets-wide,HEAVY,-0.0059526726008255,0.4153469660974617,1.0,indistinguishable,1.0,0.5373773201516572
+robustness checks,"K3c, $h=1$, in-range",Stocks,PENet-wide,HEAVY,-0.0020492681809752,0.8301047021807247,1.0,indistinguishable,1.0,0.8703665564947684
+robustness checks,"K3c, $h=1$, in-range",Stocks,SetTransformer-wide,HEAVY,-0.0075958749851133,0.3021630936052323,1.0,indistinguishable,1.0,0.4387324527998246
+robustness checks,"K3c, $h=1$, in-range",Stocks,SetGRU-wide,HEAVY,-0.0013977712017967,0.8288565012288903,1.0,indistinguishable,1.0,0.8702993262903348
+robustness checks,"K3c, $h=1$, in-range",Stocks,EQCov-wide,HEAVY,-0.0050824689838284,0.4157352244291628,1.0,indistinguishable,1.0,0.5373773201516572
+robustness checks,"K14a, $h=1$, in-range",Stocks,DeepSets-wideh,MLP-wideh,-0.006447603024223,0.1282441336494541,0.3847324009483624,indistinguishable,1.0,0.2816261894445755
+robustness checks,"K14a, $h=1$, in-range",Stocks,PENet-wideh,MLP-wideh,-0.0013749523197588,0.8354334964571772,0.8354334964571772,indistinguishable,1.0,0.8734617637212307
+robustness checks,"K14a, $h=1$, in-range",Stocks,SetTransformer-wideh,MLP-wideh,-0.0098318200210672,0.0001289089437728,0.0005156357750915,more accurate,0.08830262648436799,0.0018554283365225194
+robustness checks,"K14a, $h=1$, in-range",Stocks,SetGRU-wideh,GRU-wideh,-0.0120937919402256,6.402814593528639e-05,0.0003201407296764,more accurate,0.04430747698721818,0.0010457930502763442
+robustness checks,"K14a, $h=1$, in-range",Stocks,EQCov-wideh,MLP-wideh,-0.0030559434928908,0.2741763036108258,0.5483526072216516,indistinguishable,1.0,0.42364652891239507
+robustness checks,"K14b, $h=1$, in-range",Stocks,MLP-wideh,Linear-wideh,0.0111864178671651,0.0006720761648374,0.0047045331538622,less accurate,0.44020988796849697,0.006098468903154185
+robustness checks,"K14b, $h=1$, in-range",Stocks,GRU-wideh,Linear-wideh,0.0190797209045199,0.0043043830657216,0.0258262983943301,less accurate,1.0,0.027040355156456204
+robustness checks,"K14b, $h=1$, in-range",Stocks,DeepSets-wideh,Linear-wideh,0.0047388148429421,0.3546434889514877,0.7092869779029753,indistinguishable,1.0,0.4881328920961488
+robustness checks,"K14b, $h=1$, in-range",Stocks,PENet-wideh,Linear-wideh,0.0098114655474062,0.2217242081827074,0.6651726245481222,indistinguishable,1.0,0.38709570787242265
+robustness checks,"K14b, $h=1$, in-range",Stocks,SetTransformer-wideh,Linear-wideh,0.0013545978460979,0.6812657849728607,0.7092869779029753,indistinguishable,1.0,0.7563902597508348
+robustness checks,"K14b, $h=1$, in-range",Stocks,SetGRU-wideh,Linear-wideh,0.0069859289642942,0.141655105083399,0.5666204203335963,indistinguishable,1.0,0.30231856355736475
+robustness checks,"K14b, $h=1$, in-range",Stocks,EQCov-wideh,Linear-wideh,0.0081304743742743,0.0255008689356089,0.1275043446780449,indistinguishable,1.0,0.1035532523075831
+robustness checks,"K14c, $h=1$, in-range",Stocks,DeepSets-wideh,HEAVY,-0.0072594538755532,0.2714125192484049,1.0,indistinguishable,1.0,0.42364652891239507
+robustness checks,"K14c, $h=1$, in-range",Stocks,PENet-wideh,HEAVY,-0.0021868031710891,0.815065671139938,1.0,indistinguishable,1.0,0.8607374544365723
+robustness checks,"K14c, $h=1$, in-range",Stocks,SetTransformer-wideh,HEAVY,-0.0106436708723974,0.0723759920986682,0.3618799604933414,indistinguishable,1.0,0.205391328928653
+robustness checks,"K14c, $h=1$, in-range",Stocks,SetGRU-wideh,HEAVY,-0.0050123397542011,0.3795465107822334,1.0,indistinguishable,1.0,0.506291625090638
+robustness checks,"K14c, $h=1$, in-range",Stocks,EQCov-wideh,HEAVY,-0.003867794344221,0.5160776997530501,1.0,indistinguishable,1.0,0.6228523962536812
+robustness checks,"K3a, $h=5$, in-range",Stocks,DeepSets-wide,MLP-wide,-0.0037903752599324,0.3472069879814512,1.0,indistinguishable,1.0,0.48332790940599746
+robustness checks,"K3a, $h=5$, in-range",Stocks,PENet-wide,MLP-wide,0.0036398612648701,0.6746122353436457,1.0,indistinguishable,1.0,0.753556220330668
+robustness checks,"K3a, $h=5$, in-range",Stocks,SetTransformer-wide,MLP-wide,0.0016532562261825,0.8322813283895779,1.0,indistinguishable,1.0,0.8714056643395154
+robustness checks,"K3a, $h=5$, in-range",Stocks,SetGRU-wide,GRU-wide,0.0036888510612298,0.6758750897403369,1.0,indistinguishable,1.0,0.7538212305905124
+robustness checks,"K3a, $h=5$, in-range",Stocks,EQCov-wide,MLP-wide,-0.0007597927742601,0.914367836356198,1.0,indistinguishable,1.0,0.9321225516252504
+robustness checks,"K3b, $h=5$, in-range",Stocks,MLP-wide,Linear-wide,0.0135285288721025,0.0088367365870141,0.0618571561090988,indistinguishable,1.0,0.04775736317246591
+robustness checks,"K3b, $h=5$, in-range",Stocks,GRU-wide,Linear-wide,0.0307199953928438,0.0246660365758115,0.147996219454869,indistinguishable,1.0,0.10185133080461492
+robustness checks,"K3b, $h=5$, in-range",Stocks,DeepSets-wide,Linear-wide,0.00973815361217,0.1215518457354124,0.4862073829416498,indistinguishable,1.0,0.274894174201625
+robustness checks,"K3b, $h=5$, in-range",Stocks,PENet-wide,Linear-wide,0.0171683901369727,0.1291265657725469,0.4862073829416498,indistinguishable,1.0,0.2816261894445755
+robustness checks,"K3b, $h=5$, in-range",Stocks,SetTransformer-wide,Linear-wide,0.0151817850982851,0.1383581114824726,0.4862073829416498,indistinguishable,1.0,0.29822056287277815
+robustness checks,"K3b, $h=5$, in-range",Stocks,SetGRU-wide,Linear-wide,0.0344088464540737,0.0921359602691954,0.4606798013459773,indistinguishable,1.0,0.23659603181095723
+robustness checks,"K3b, $h=5$, in-range",Stocks,EQCov-wide,Linear-wide,0.0127687360978424,0.1703473611886503,0.4862073829416498,indistinguishable,1.0,0.3393097844814579
+robustness checks,"K3c, $h=5$, in-range",Stocks,DeepSets-wide,HEAVY,0.0019405406649472,0.8182736280774175,1.0,indistinguishable,1.0,0.8628853897229584
+robustness checks,"K3c, $h=5$, in-range",Stocks,PENet-wide,HEAVY,0.0093707771897499,0.4902753119960886,1.0,indistinguishable,1.0,0.599587943955283
+robustness checks,"K3c, $h=5$, in-range",Stocks,SetTransformer-wide,HEAVY,0.0073841721510623,0.5483728451313679,1.0,indistinguishable,1.0,0.6520860538391654
+robustness checks,"K3c, $h=5$, in-range",Stocks,SetGRU-wide,HEAVY,0.0266112335068509,0.2258618665683903,1.0,indistinguishable,1.0,0.3908465999306228
+robustness checks,"K3c, $h=5$, in-range",Stocks,EQCov-wide,HEAVY,0.0049711231506196,0.6643887181728074,1.0,indistinguishable,1.0,0.7432659175905837
+robustness checks,"K4a, $h=5$, main design",Stocks,MLP-idsort,MLP,-0.0017280975323389,0.2053573809993029,0.2053573809993029,indistinguishable,1.0,0.37813828597507976
+robustness checks,"K4a, $h=5$, raw inputs",Stocks,MLP-idsort-RAW,MLP-RAW,-0.009015405450189,0.0013863346849073,0.0041590040547221,more accurate,0.8900268677104867,0.010839957376668782
+robustness checks,"K4a, $h=5$, pool 50",Stocks,MLP-idsort-P50,MLP-P50,-0.0079446982127769,0.0180913105332202,0.0361826210664404,more accurate,1.0,0.08029634046734102
+robustness checks,"K4b, $h=5$, main design",Stocks,MLP-sorted,MLP-idsort,0.000103535865181,0.963931893680234,0.963931893680234,indistinguishable,1.0,0.9692064868057073
+robustness checks,"K4b, $h=5$, raw inputs",Stocks,MLP-sorted-RAW,MLP-idsort-RAW,-0.0237149318611601,2.617878373488651e-20,7.853635120465953e-20,more accurate,1.913669091020204e-17,3.848281209028317e-18
+robustness checks,"K4b, $h=5$, pool 50",Stocks,MLP-sorted-P50,MLP-idsort-P50,-0.0021499548896481,0.479919012565403,0.959838025130806,indistinguishable,1.0,0.5918464332811597
+robustness checks,"K3a, $h=22$, in-range",Stocks,DeepSets-wide,MLP-wide,0.0072593375208746,0.4793486438413422,1.0,indistinguishable,1.0,0.5918464332811597
+robustness checks,"K3a, $h=22$, in-range",Stocks,PENet-wide,MLP-wide,0.0224670947544392,0.4277629944582589,1.0,indistinguishable,1.0,0.5496604911308047
+robustness checks,"K3a, $h=22$, in-range",Stocks,SetTransformer-wide,MLP-wide,0.0233756289448471,0.4335019183699342,1.0,indistinguishable,1.0,0.5531665104199681
+robustness checks,"K3a, $h=22$, in-range",Stocks,SetGRU-wide,GRU-wide,0.0581745861899404,0.3288354628102067,1.0,indistinguishable,1.0,0.462130143719889
+robustness checks,"K3a, $h=22$, in-range",Stocks,EQCov-wide,MLP-wide,0.024507818562727,0.2882273222934144,1.0,indistinguishable,1.0,0.4330974255399312
+robustness checks,"K3b, $h=22$, in-range",Stocks,MLP-wide,Linear-wide,0.0503658808369147,0.1278476621957325,0.8949336353701274,indistinguishable,1.0,0.2816261894445755
+robustness checks,"K3b, $h=22$, in-range",Stocks,GRU-wide,Linear-wide,0.0342238641183509,0.1306125714952546,0.8949336353701274,indistinguishable,1.0,0.2840243788432312
+robustness checks,"K3b, $h=22$, in-range",Stocks,DeepSets-wide,Linear-wide,0.0576252183577893,0.1769977496049161,0.8949336353701274,indistinguishable,1.0,0.34599294138195036
+robustness checks,"K3b, $h=22$, in-range",Stocks,PENet-wide,Linear-wide,0.0728329755913539,0.2293521064141046,0.8949336353701274,indistinguishable,1.0,0.3929459165836058
+robustness checks,"K3b, $h=22$, in-range",Stocks,SetTransformer-wide,Linear-wide,0.0737415097817618,0.2356907873782757,0.8949336353701274,indistinguishable,1.0,0.39992484316468685
+robustness checks,"K3b, $h=22$, in-range",Stocks,SetGRU-wide,Linear-wide,0.0923984503082914,0.2521036235405069,0.8949336353701274,indistinguishable,1.0,0.41176925178282797
+robustness checks,"K3b, $h=22$, in-range",Stocks,EQCov-wide,Linear-wide,0.0748736993996417,0.1729061464909944,0.8949336353701274,indistinguishable,1.0,0.34162907976043244
+robustness checks,"K3c, $h=22$, in-range",Stocks,DeepSets-wide,GJR,0.0869659941189391,0.2201154530321362,1.0,indistinguishable,1.0,0.38709570787242265
+robustness checks,"K3c, $h=22$, in-range",Stocks,PENet-wide,GJR,0.1021737513525037,0.249355523744722,1.0,indistinguishable,1.0,0.41093343038648134
+robustness checks,"K3c, $h=22$, in-range",Stocks,SetTransformer-wide,GJR,0.1030822855429115,0.2507924392801796,1.0,indistinguishable,1.0,0.41176925178282797
+robustness checks,"K3c, $h=22$, in-range",Stocks,SetGRU-wide,GJR,0.1217392260694412,0.2622065551971257,1.0,indistinguishable,1.0,0.41655731679721364
+robustness checks,"K3c, $h=22$, in-range",Stocks,EQCov-wide,GJR,0.1042144751607915,0.2035855592589314,1.0,indistinguishable,1.0,0.37691533011414247
+robustness checks,"K14a, $h=22$, in-range",Stocks,DeepSets-wideh,MLP-wideh,0.0183364164591283,0.4358769803728376,1.0,indistinguishable,1.0,0.5552332418960756
+robustness checks,"K14a, $h=22$, in-range",Stocks,PENet-wideh,MLP-wideh,0.0181726280028813,0.3873255361557558,1.0,indistinguishable,1.0,0.5120220666807204
+robustness checks,"K14a, $h=22$, in-range",Stocks,SetTransformer-wideh,MLP-wideh,0.0056184432597786,0.6496578017196167,1.0,indistinguishable,1.0,0.7357449680491807
+robustness checks,"K14a, $h=22$, in-range",Stocks,SetGRU-wideh,GRU-wideh,-0.0074885058788105,0.1116621828713662,0.5583109143568312,indistinguishable,1.0,0.2638961556606243
+robustness checks,"K14a, $h=22$, in-range",Stocks,EQCov-wideh,MLP-wideh,-0.0076235980182798,0.1250265213168796,0.5583109143568312,indistinguishable,1.0,0.2801788261665738
+robustness checks,"K14b, $h=22$, in-range",Stocks,MLP-wideh,Linear-wideh,0.0313812362307127,0.0854235957169873,0.5664066055806505,indistinguishable,1.0,0.22914723668607906
+robustness checks,"K14b, $h=22$, in-range",Stocks,GRU-wideh,Linear-wideh,0.0307321899675236,0.0809152293686643,0.5664066055806505,indistinguishable,1.0,0.22026923550358615
+robustness checks,"K14b, $h=22$, in-range",Stocks,DeepSets-wideh,Linear-wideh,0.049717652689841,0.224953860510158,0.7753397813502689,indistinguishable,1.0,0.3908465999306228
+robustness checks,"K14b, $h=22$, in-range",Stocks,PENet-wideh,Linear-wideh,0.049553864233594,0.1938349453375672,0.7753397813502689,indistinguishable,1.0,0.36445261670079976
+robustness checks,"K14b, $h=22$, in-range",Stocks,SetTransformer-wideh,Linear-wideh,0.0369996794904914,0.2076596252953668,0.7753397813502689,indistinguishable,1.0,0.38001749713049554
+robustness checks,"K14b, $h=22$, in-range",Stocks,SetGRU-wideh,Linear-wideh,0.0232436840887131,0.1468918951448909,0.7344594757244548,indistinguishable,1.0,0.3067202924190193
+robustness checks,"K14b, $h=22$, in-range",Stocks,EQCov-wideh,Linear-wideh,0.0237576382124329,0.1966552567607261,0.7753397813502689,indistinguishable,1.0,0.3677903656975412
+robustness checks,"K14c, $h=22$, in-range",Stocks,DeepSets-wideh,GJR,0.0790584284509908,0.2515968497761738,1.0,indistinguishable,1.0,0.41176925178282797
+robustness checks,"K14c, $h=22$, in-range",Stocks,PENet-wideh,GJR,0.0788946399947438,0.2363961721468839,1.0,indistinguishable,1.0,0.39992484316468685
+robustness checks,"K14c, $h=22$, in-range",Stocks,SetTransformer-wideh,GJR,0.0663404552516412,0.2512698105630243,1.0,indistinguishable,1.0,0.41176925178282797
+robustness checks,"K14c, $h=22$, in-range",Stocks,SetGRU-wideh,GJR,0.0525844598498629,0.2291342524402472,1.0,indistinguishable,1.0,0.3929459165836058
+robustness checks,"K14c, $h=22$, in-range",Stocks,EQCov-wideh,GJR,0.0530984139735827,0.2556658893035017,1.0,indistinguishable,1.0,0.4139084331235105
+robustness checks,"K6, $h=1$, in-range",Stocks,Linear-noasset,Linear,0.0534870478722231,0.0002522256826042,0.0012611284130212,less accurate,0.1700001100752308,0.002990094785711081
+robustness checks,"K6, $h=1$, in-range",Stocks,Linear-noeuler,Linear,0.0040067127970813,0.0034001825934287,0.0102005477802862,less accurate,1.0,0.022719401874273588
+robustness checks,"K6, $h=1$, in-range",Stocks,Linear-nopairs,Linear,7.899989177721148e-05,0.2096857911265625,0.4193715822531251,indistinguishable,1.0,0.38001749713049554
+robustness checks,"K6, $h=1$, in-range",Stocks,Linear-noport,Linear,0.0030167353789969,0.2278342049110085,0.4193715822531251,indistinguishable,1.0,0.3929459165836058
+robustness checks,"K6, $h=1$, in-range",Stocks,Linear-portonly,Linear,0.0615684557423665,0.0002949340996948,0.0012611284130212,less accurate,0.1981957149949056,0.003387133801182469
+robustness checks,"K7, $h=1$, in-range",Stocks,DeepSets,MLP-small,-0.0070344489396224,0.0618732893214295,0.1211199585971966,indistinguishable,1.0,0.18679524790270968
+robustness checks,"K7, $h=1$, in-range",Stocks,DeepSets-L,MLP,-0.0076732301782661,0.0605599792985983,0.1211199585971966,indistinguishable,1.0,0.184695372549667
+robustness checks,"K6, $h=5$, in-range",Stocks,Linear-noasset,Linear,0.0456462791530528,0.0010910978384112,0.0054554891920563,less accurate,0.7037581057752239,0.008812713310244306
+robustness checks,"K6, $h=5$, in-range",Stocks,Linear-noeuler,Linear,0.0009778567616129,0.0946384127243829,0.2839152381731488,indistinguishable,1.0,0.23659603181095723
+robustness checks,"K6, $h=5$, in-range",Stocks,Linear-nopairs,Linear,5.570405493887999e-05,0.6239218418676422,1.0,indistinguishable,1.0,0.7143030432596839
+robustness checks,"K6, $h=5$, in-range",Stocks,Linear-noport,Linear,0.000689691861876,0.7935134917364668,1.0,indistinguishable,1.0,0.8440411236270666
+robustness checks,"K6, $h=5$, in-range",Stocks,Linear-portonly,Linear,0.0568114952215388,0.0037811398448368,0.0151245593793472,less accurate,1.0,0.024378401631184633
+robustness checks,"K7, $h=5$, in-range",Stocks,DeepSets,MLP-small,-0.0029585095138519,0.5129353018827144,0.5129353018827144,indistinguishable,1.0,0.6210995830046048
+robustness checks,"K7, $h=5$, in-range",Stocks,DeepSets-L,MLP,-0.0057534460640086,0.1588754797211048,0.3177509594422096,indistinguishable,1.0,0.32437077109725565
+robustness checks,"K6, $h=22$, in-range",Stocks,Linear-noasset,Linear,0.022874703620479,0.2135941157049937,0.9215262777046404,indistinguishable,1.0,0.3829065244955375
+robustness checks,"K6, $h=22$, in-range",Stocks,Linear-noeuler,Linear,-0.0024830070845208,0.5956694347934204,1.0,indistinguishable,1.0,0.6905631460144542
+robustness checks,"K6, $h=22$, in-range",Stocks,Linear-nopairs,Linear,0.0003146149601323,0.6263722822826373,1.0,indistinguishable,1.0,0.7159931998098575
+robustness checks,"K6, $h=22$, in-range",Stocks,Linear-noport,Linear,0.0033672776504908,0.3205639354605281,0.9616918063815842,indistinguishable,1.0,0.45633855505235255
+robustness checks,"K6, $h=22$, in-range",Stocks,Linear-portonly,Linear,0.0524719279661251,0.184305255540928,0.9215262777046404,indistinguishable,1.0,0.3536928533226686
+robustness checks,"K7, $h=22$, in-range",Stocks,DeepSets,MLP-small,0.0400683449674863,0.2853014596995433,0.5471773322327536,indistinguishable,1.0,0.4320685906637887
+robustness checks,"K7, $h=22$, in-range",Stocks,DeepSets-L,MLP,0.0334975947452464,0.2735886661163768,0.5471773322327536,indistinguishable,1.0,0.42364652891239507
+robustness checks,"K5a, $h=1$, in-range",Stocks,MLP-tsort,MLP-sorted,0.000121817301149,0.6796845008190602,1.0,indistinguishable,1.0,0.7563902597508348
+robustness checks,"K5a, $h=5$, in-range",Stocks,MLP-tsort,MLP-sorted,-0.000151727387284,0.7287608839851414,1.0,indistinguishable,1.0,0.7958978450654961
+robustness checks,"K5a, $h=22$, in-range",Stocks,MLP-tsort,MLP-sorted,-0.0011171733531776,0.2381861699832936,0.7145585099498808,indistinguishable,1.0,0.39992484316468685
+robustness checks,"K5b, $h=1$, in-range",Stocks,MLP-tsort,MLP,-0.0061463295256668,0.0186520864784849,0.0559562594354547,indistinguishable,1.0,0.0820915183334515
+robustness checks,"K5b, $h=5$, in-range",Stocks,MLP-tsort,MLP,-0.0017762890544419,0.3832463485141648,0.3832463485141648,indistinguishable,1.0,0.5075424615457858
+robustness checks,"K5b, $h=22$, in-range",Stocks,MLP-tsort,MLP,0.0061084662998944,0.0925110847544641,0.1850221695089283,indistinguishable,1.0,0.23659603181095723
+robustness checks,"K10a, $h=5$, in-range, raw inputs",Stocks,DeepSets-RAW,MLP-sorted-RAW-d3,0.0304544247171103,8.680239579130096e-05,0.0002604071873739,less accurate,0.05972004830441506,0.001329161685554296
+robustness checks,"K10a, $h=5$, in-range, raw inputs",Stocks,PENet-RAW,MLP-sorted-RAW-d3,-0.0002489501279493,0.9542603563087252,0.9542603563087252,indistinguishable,1.0,0.9634359366578477
+robustness checks,"K10a, $h=5$, in-range, raw inputs",Stocks,SetTransformer-RAW,MLP-sorted-RAW-d3,0.0076748313799737,0.0873009079037183,0.1746018158074366,indistinguishable,1.0,0.23164926833103297
+robustness checks,"K10a, $h=5$, in-range, pool 50",Stocks,DeepSets-P50,MLP-sorted-P50-d3,-0.0130448965922766,0.0023451724892,0.0070355174676002,more accurate,1.0,0.01723701779562
+robustness checks,"K10a, $h=5$, in-range, pool 50",Stocks,PENet-P50,MLP-sorted-P50-d3,-0.0151702031884945,0.0006568618670515,0.002627447468206,more accurate,0.43090138478578405,0.0060349184035356565
+robustness checks,"K10a, $h=5$, in-range, pool 50",Stocks,SetTransformer-P50,MLP-sorted-P50-d3,-0.0143302037406835,0.0028185596440079,0.0070355174676002,more accurate,1.0,0.019909841647178458
+robustness checks,"K10a, $h=5$, in-range, pool 50",Stocks,EQCov-P50,MLP-sorted-P50-d3,-0.0095479941686695,0.0762470258396022,0.0762470258396022,indistinguishable,1.0,0.21308579464679703
+robustness checks,"K10a, $h=5$, in-range, pool 500",Stocks,DeepSets-P500,MLP-sorted-P500-d3,-0.0039237295038978,0.1889283779156591,0.3778567558313183,indistinguishable,1.0,0.3580459280592541
+robustness checks,"K10a, $h=5$, in-range, pool 500",Stocks,PENet-P500,MLP-sorted-P500-d3,-0.0055356526582106,0.0620109394398111,0.1860328183194335,indistinguishable,1.0,0.18679524790270968
+robustness checks,"K10a, $h=5$, in-range, pool 500",Stocks,SetTransformer-P500,MLP-sorted-P500-d3,-0.0072225188373622,0.0285800284219743,0.1143201136878972,indistinguishable,1.0,0.10940792130287036
+robustness checks,"K10a, $h=5$, in-range, pool 500",Stocks,EQCov-P500,MLP-sorted-P500-d3,-0.0023724549964019,0.3610564847414224,0.3778567558313183,indistinguishable,1.0,0.4932649001578912
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",Stocks,MLP-sorted-RAW-d3,MLP-RAW,-0.0330012853983095,7.131141231152117e-20,2.8524564924608467e-19,more accurate,5.2057330987410455e-17,8.735648008161343e-18
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",Stocks,MLP-sorted-P50-d3,MLP-P50,-0.0089174900702561,2.1968002829629164e-05,4.393600565925833e-05,more accurate,0.015443505989229302,0.0004892873357508314
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",Stocks,MLP-sorted-P500-d3,MLP-P500,-0.003114291468948,8.923925984420695e-07,2.6771777953262085e-06,more accurate,0.0006389531004845218,3.183600854624053e-05
+robustness checks,"K10b (aux: sorted d0.3 vs MLP), $h=5$, in-range",Stocks,MLP-sorted-d3,MLP,-0.002378605116112,0.1890092790299192,0.1890092790299192,indistinguishable,1.0,0.3580459280592541
+robustness checks,"K15a, $h=1$, in-range",Stocks,DeepSets,VolCorr-asset,-0.0111265898033605,0.0580555754765847,0.1741667264297543,indistinguishable,1.0,0.18149196526743153
+robustness checks,"K15a, $h=1$, in-range",Stocks,PENet,VolCorr-asset,-0.0139737099482611,0.0312712581145085,0.1329326568966454,indistinguishable,1.0,0.1160827005765846
+robustness checks,"K15a, $h=1$, in-range",Stocks,SetTransformer,VolCorr-asset,-0.0157061045782505,0.026586531379329,0.1329326568966454,indistinguishable,1.0,0.10564863965106996
+robustness checks,"K15a, $h=1$, in-range",Stocks,SetGRU,VolCorr-asset,-0.0100747734600541,0.1049822643043682,0.1746036661978126,indistinguishable,1.0,0.2555031929261941
+robustness checks,"K15a, $h=1$, in-range",Stocks,EQCov,VolCorr-asset,-0.0114075282025765,0.0873018330989063,0.1746036661978126,indistinguishable,1.0,0.23164926833103297
+robustness checks,"K15b, $h=1$, in-range",Stocks,Linear,VolCorr-asset,-0.0104956453729697,0.0982471178822148,0.0982471178822148,indistinguishable,1.0,0.24395821501158066
+robustness checks,"K15c, $h=1$, in-range",Stocks,VolCorr,VolCorr-asset,0.001035396897278,0.8214143038732854,0.8214143038732854,indistinguishable,1.0,0.8649563228465111
+robustness checks,"K15a, $h=5$, in-range",Stocks,DeepSets,VolCorr-asset,-0.0138500785724335,0.0585736328133713,0.2491889335518094,indistinguishable,1.0,0.1816524055604553
+robustness checks,"K15a, $h=5$, in-range",Stocks,PENet,VolCorr-asset,-0.0147502587186149,0.0576851066723111,0.2491889335518094,indistinguishable,1.0,0.18149196526743153
+robustness checks,"K15a, $h=5$, in-range",Stocks,SetTransformer,VolCorr-asset,-0.0158806158234786,0.0498377867103618,0.2491889335518094,indistinguishable,1.0,0.16575010512269647
+robustness checks,"K15a, $h=5$, in-range",Stocks,SetGRU,VolCorr-asset,-0.0067375326081554,0.3414620353475835,0.3414620353475835,indistinguishable,1.0,0.4762326299439732
+robustness checks,"K15a, $h=5$, in-range",Stocks,EQCov,VolCorr-asset,-0.0128354842957068,0.1265569663772823,0.2531139327545647,indistinguishable,1.0,0.2801788261665738
+robustness checks,"K15b, $h=5$, in-range",Stocks,Linear,VolCorr-asset,-0.0166201818292533,0.0661098495570691,0.0661098495570691,indistinguishable,1.0,0.19436295769778314
+robustness checks,"K15c, $h=5$, in-range",Stocks,VolCorr,VolCorr-asset,-0.0024224833472163,0.6622353412538828,0.6622353412538828,indistinguishable,1.0,0.7425056514595062
+robustness checks,"K15a, $h=22$, in-range",Stocks,DeepSets,VolCorr-asset,-0.0163357495093862,0.4472765360640302,1.0,indistinguishable,1.0,0.5650808072702779
+robustness checks,"K15a, $h=22$, in-range",Stocks,PENet,VolCorr-asset,-0.0098979784202394,0.3659195305168078,1.0,indistinguishable,1.0,0.4980571387589884
+robustness checks,"K15a, $h=22$, in-range",Stocks,SetTransformer,VolCorr-asset,-0.0219979755231503,0.3720361381063115,1.0,indistinguishable,1.0,0.502659120419373
+robustness checks,"K15a, $h=22$, in-range",Stocks,SetGRU,VolCorr-asset,-0.0314203132344477,0.2953088062022213,1.0,indistinguishable,1.0,0.4349738929030714
+robustness checks,"K15a, $h=22$, in-range",Stocks,EQCov,VolCorr-asset,-0.026353162474943,0.2637395805295061,1.0,indistinguishable,1.0,0.41668533711664346
+robustness checks,"K15b, $h=22$, in-range",Stocks,Linear,VolCorr-asset,-0.0549539129747744,0.2797496007264523,0.2797496007264523,indistinguishable,1.0,0.4260832826902366
+robustness checks,"K15c, $h=22$, in-range",Stocks,VolCorr,VolCorr-asset,-0.0129417104523678,0.4990378374081857,0.4990378374081857,indistinguishable,1.0,0.6062691082562256

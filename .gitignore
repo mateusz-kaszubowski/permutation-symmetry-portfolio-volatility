@@ -1,0 +1,15 @@
+/.venv/
+/data/
+/logs/
+/results/
+/results_stocks/
+/results_stocks54/
+/.idea/
+/.pytest_cache/
+__pycache__/
+*.pyc
+/paper/
+/docs/
+/.claude/
+/replication.tmp.*/
+/.coverage

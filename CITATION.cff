@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code or the result tables, please cite this repository."
+title: "Permutation symmetry in multi-asset portfolio volatility forecasting"
+version: 1.0.0
+date-released: 2026-11-06
+license: MIT
+repository-code: "https://github.com/mateusz-kaszubowski/permutation-symmetry-portfolio-volatility"
+authors:
+  - family-names: Kaszubowski
+    given-names: Mateusz
+  - family-names: Weichbroth
+    given-names: Paweł
